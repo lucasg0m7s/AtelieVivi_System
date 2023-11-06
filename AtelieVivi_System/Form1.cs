@@ -62,5 +62,47 @@ namespace AtelieVivi_System
         {
             showSubMenu(panelCadastrosSubmenu);
         }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelAtualizarSubmenu);
+
+        }
+
+        private void btnRemover_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelRemoverSubmenu);
+
+        }
+
+        private void btnCadastroClientes_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void btnCadastroLocacoes_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void btnAtualizarClientes_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void btnAtualizarLocacoes_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void btnRemoveClientes_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void btnRemoverLocacao_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
     }
 }

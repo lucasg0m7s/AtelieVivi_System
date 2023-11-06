@@ -30,16 +30,16 @@
         {
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.panelRemoverSubmenu = new System.Windows.Forms.Panel();
-            this.iconButton7 = new FontAwesome.Sharp.IconButton();
-            this.iconButton8 = new FontAwesome.Sharp.IconButton();
+            this.btnRemoverLocacao = new FontAwesome.Sharp.IconButton();
+            this.btnRemoveClientes = new FontAwesome.Sharp.IconButton();
             this.btnRemover = new FontAwesome.Sharp.IconButton();
             this.panelAtualizarSubmenu = new System.Windows.Forms.Panel();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
-            this.iconButton5 = new FontAwesome.Sharp.IconButton();
+            this.btnAtualizarLocacoes = new FontAwesome.Sharp.IconButton();
+            this.btnAtualizarClientes = new FontAwesome.Sharp.IconButton();
             this.btnAtualizar = new FontAwesome.Sharp.IconButton();
             this.panelCadastrosSubmenu = new System.Windows.Forms.Panel();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnCadastroLocacoes = new FontAwesome.Sharp.IconButton();
+            this.btnCadastroClientes = new FontAwesome.Sharp.IconButton();
             this.btnCadastrar = new FontAwesome.Sharp.IconButton();
             this.btnPesquisar = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
@@ -64,61 +64,63 @@
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(220, 600);
+            this.panelSideMenu.Size = new System.Drawing.Size(250, 600);
             this.panelSideMenu.TabIndex = 0;
             // 
             // panelRemoverSubmenu
             // 
             this.panelRemoverSubmenu.BackColor = System.Drawing.Color.Silver;
-            this.panelRemoverSubmenu.Controls.Add(this.iconButton7);
-            this.panelRemoverSubmenu.Controls.Add(this.iconButton8);
+            this.panelRemoverSubmenu.Controls.Add(this.btnRemoverLocacao);
+            this.panelRemoverSubmenu.Controls.Add(this.btnRemoveClientes);
             this.panelRemoverSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelRemoverSubmenu.Location = new System.Drawing.Point(0, 500);
+            this.panelRemoverSubmenu.Location = new System.Drawing.Point(0, 488);
             this.panelRemoverSubmenu.Name = "panelRemoverSubmenu";
-            this.panelRemoverSubmenu.Size = new System.Drawing.Size(220, 100);
+            this.panelRemoverSubmenu.Size = new System.Drawing.Size(250, 100);
             this.panelRemoverSubmenu.TabIndex = 7;
             // 
-            // iconButton7
+            // btnRemoverLocacao
             // 
-            this.iconButton7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton7.FlatAppearance.BorderSize = 0;
-            this.iconButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton7.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.iconButton7.IconChar = FontAwesome.Sharp.IconChar._500Px;
-            this.iconButton7.IconColor = System.Drawing.Color.Black;
-            this.iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton7.IconSize = 38;
-            this.iconButton7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton7.Location = new System.Drawing.Point(0, 40);
-            this.iconButton7.Name = "iconButton7";
-            this.iconButton7.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.iconButton7.Size = new System.Drawing.Size(220, 40);
-            this.iconButton7.TabIndex = 1;
-            this.iconButton7.Text = "iconButton7";
-            this.iconButton7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton7.UseVisualStyleBackColor = true;
+            this.btnRemoverLocacao.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRemoverLocacao.FlatAppearance.BorderSize = 0;
+            this.btnRemoverLocacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoverLocacao.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.btnRemoverLocacao.IconChar = FontAwesome.Sharp.IconChar._500Px;
+            this.btnRemoverLocacao.IconColor = System.Drawing.Color.Black;
+            this.btnRemoverLocacao.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnRemoverLocacao.IconSize = 38;
+            this.btnRemoverLocacao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRemoverLocacao.Location = new System.Drawing.Point(0, 40);
+            this.btnRemoverLocacao.Name = "btnRemoverLocacao";
+            this.btnRemoverLocacao.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnRemoverLocacao.Size = new System.Drawing.Size(250, 40);
+            this.btnRemoverLocacao.TabIndex = 1;
+            this.btnRemoverLocacao.Text = "Remover Locações";
+            this.btnRemoverLocacao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRemoverLocacao.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRemoverLocacao.UseVisualStyleBackColor = true;
+            this.btnRemoverLocacao.Click += new System.EventHandler(this.btnRemoverLocacao_Click);
             // 
-            // iconButton8
+            // btnRemoveClientes
             // 
-            this.iconButton8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton8.FlatAppearance.BorderSize = 0;
-            this.iconButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton8.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.iconButton8.IconChar = FontAwesome.Sharp.IconChar._500Px;
-            this.iconButton8.IconColor = System.Drawing.Color.Black;
-            this.iconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton8.IconSize = 38;
-            this.iconButton8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton8.Location = new System.Drawing.Point(0, 0);
-            this.iconButton8.Name = "iconButton8";
-            this.iconButton8.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.iconButton8.Size = new System.Drawing.Size(220, 40);
-            this.iconButton8.TabIndex = 0;
-            this.iconButton8.Text = "iconButton8";
-            this.iconButton8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton8.UseVisualStyleBackColor = true;
+            this.btnRemoveClientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRemoveClientes.FlatAppearance.BorderSize = 0;
+            this.btnRemoveClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoveClientes.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.btnRemoveClientes.IconChar = FontAwesome.Sharp.IconChar.UserMinus;
+            this.btnRemoveClientes.IconColor = System.Drawing.Color.Black;
+            this.btnRemoveClientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnRemoveClientes.IconSize = 38;
+            this.btnRemoveClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRemoveClientes.Location = new System.Drawing.Point(0, 0);
+            this.btnRemoveClientes.Name = "btnRemoveClientes";
+            this.btnRemoveClientes.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnRemoveClientes.Size = new System.Drawing.Size(250, 40);
+            this.btnRemoveClientes.TabIndex = 0;
+            this.btnRemoveClientes.Text = "Remover Cliente";
+            this.btnRemoveClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRemoveClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRemoveClientes.UseVisualStyleBackColor = true;
+            this.btnRemoveClientes.Click += new System.EventHandler(this.btnRemoveClientes_Click);
             // 
             // btnRemover
             // 
@@ -126,73 +128,76 @@
             this.btnRemover.FlatAppearance.BorderSize = 0;
             this.btnRemover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemover.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemover.IconChar = FontAwesome.Sharp.IconChar.UserMinus;
+            this.btnRemover.IconChar = FontAwesome.Sharp.IconChar.Minus;
             this.btnRemover.IconColor = System.Drawing.Color.Black;
             this.btnRemover.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRemover.IconSize = 38;
             this.btnRemover.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRemover.Location = new System.Drawing.Point(0, 450);
+            this.btnRemover.Location = new System.Drawing.Point(0, 438);
             this.btnRemover.Name = "btnRemover";
             this.btnRemover.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnRemover.Size = new System.Drawing.Size(220, 50);
+            this.btnRemover.Size = new System.Drawing.Size(250, 50);
             this.btnRemover.TabIndex = 6;
             this.btnRemover.Text = "Remover Dados";
             this.btnRemover.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRemover.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRemover.UseVisualStyleBackColor = true;
+            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
             // 
             // panelAtualizarSubmenu
             // 
             this.panelAtualizarSubmenu.BackColor = System.Drawing.Color.Silver;
-            this.panelAtualizarSubmenu.Controls.Add(this.iconButton4);
-            this.panelAtualizarSubmenu.Controls.Add(this.iconButton5);
+            this.panelAtualizarSubmenu.Controls.Add(this.btnAtualizarLocacoes);
+            this.panelAtualizarSubmenu.Controls.Add(this.btnAtualizarClientes);
             this.panelAtualizarSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelAtualizarSubmenu.Location = new System.Drawing.Point(0, 350);
+            this.panelAtualizarSubmenu.Location = new System.Drawing.Point(0, 338);
             this.panelAtualizarSubmenu.Name = "panelAtualizarSubmenu";
-            this.panelAtualizarSubmenu.Size = new System.Drawing.Size(220, 100);
+            this.panelAtualizarSubmenu.Size = new System.Drawing.Size(250, 100);
             this.panelAtualizarSubmenu.TabIndex = 5;
             // 
-            // iconButton4
+            // btnAtualizarLocacoes
             // 
-            this.iconButton4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton4.FlatAppearance.BorderSize = 0;
-            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton4.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar._500Px;
-            this.iconButton4.IconColor = System.Drawing.Color.Black;
-            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.IconSize = 38;
-            this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.Location = new System.Drawing.Point(0, 40);
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.iconButton4.Size = new System.Drawing.Size(220, 40);
-            this.iconButton4.TabIndex = 1;
-            this.iconButton4.Text = "iconButton4";
-            this.iconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton4.UseVisualStyleBackColor = true;
+            this.btnAtualizarLocacoes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAtualizarLocacoes.FlatAppearance.BorderSize = 0;
+            this.btnAtualizarLocacoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtualizarLocacoes.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.btnAtualizarLocacoes.IconChar = FontAwesome.Sharp.IconChar._500Px;
+            this.btnAtualizarLocacoes.IconColor = System.Drawing.Color.Black;
+            this.btnAtualizarLocacoes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAtualizarLocacoes.IconSize = 38;
+            this.btnAtualizarLocacoes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAtualizarLocacoes.Location = new System.Drawing.Point(0, 40);
+            this.btnAtualizarLocacoes.Name = "btnAtualizarLocacoes";
+            this.btnAtualizarLocacoes.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnAtualizarLocacoes.Size = new System.Drawing.Size(250, 40);
+            this.btnAtualizarLocacoes.TabIndex = 1;
+            this.btnAtualizarLocacoes.Text = "Atualizar Locações";
+            this.btnAtualizarLocacoes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAtualizarLocacoes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAtualizarLocacoes.UseVisualStyleBackColor = true;
+            this.btnAtualizarLocacoes.Click += new System.EventHandler(this.btnAtualizarLocacoes_Click);
             // 
-            // iconButton5
+            // btnAtualizarClientes
             // 
-            this.iconButton5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton5.FlatAppearance.BorderSize = 0;
-            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton5.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar._500Px;
-            this.iconButton5.IconColor = System.Drawing.Color.Black;
-            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton5.IconSize = 38;
-            this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton5.Location = new System.Drawing.Point(0, 0);
-            this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.iconButton5.Size = new System.Drawing.Size(220, 40);
-            this.iconButton5.TabIndex = 0;
-            this.iconButton5.Text = "iconButton5";
-            this.iconButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton5.UseVisualStyleBackColor = true;
+            this.btnAtualizarClientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAtualizarClientes.FlatAppearance.BorderSize = 0;
+            this.btnAtualizarClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtualizarClientes.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.btnAtualizarClientes.IconChar = FontAwesome.Sharp.IconChar.UserEdit;
+            this.btnAtualizarClientes.IconColor = System.Drawing.Color.Black;
+            this.btnAtualizarClientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAtualizarClientes.IconSize = 38;
+            this.btnAtualizarClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAtualizarClientes.Location = new System.Drawing.Point(0, 0);
+            this.btnAtualizarClientes.Name = "btnAtualizarClientes";
+            this.btnAtualizarClientes.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnAtualizarClientes.Size = new System.Drawing.Size(250, 40);
+            this.btnAtualizarClientes.TabIndex = 0;
+            this.btnAtualizarClientes.Text = "Atualizar Clientes";
+            this.btnAtualizarClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAtualizarClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAtualizarClientes.UseVisualStyleBackColor = true;
+            this.btnAtualizarClientes.Click += new System.EventHandler(this.btnAtualizarClientes_Click);
             // 
             // btnAtualizar
             // 
@@ -200,73 +205,76 @@
             this.btnAtualizar.FlatAppearance.BorderSize = 0;
             this.btnAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAtualizar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtualizar.IconChar = FontAwesome.Sharp.IconChar.UserEdit;
+            this.btnAtualizar.IconChar = FontAwesome.Sharp.IconChar.Pen;
             this.btnAtualizar.IconColor = System.Drawing.Color.Black;
             this.btnAtualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAtualizar.IconSize = 38;
             this.btnAtualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAtualizar.Location = new System.Drawing.Point(0, 300);
+            this.btnAtualizar.Location = new System.Drawing.Point(0, 288);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnAtualizar.Size = new System.Drawing.Size(220, 50);
+            this.btnAtualizar.Size = new System.Drawing.Size(250, 50);
             this.btnAtualizar.TabIndex = 4;
             this.btnAtualizar.Text = "Atualizar Dados";
             this.btnAtualizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAtualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // panelCadastrosSubmenu
             // 
             this.panelCadastrosSubmenu.BackColor = System.Drawing.Color.Silver;
-            this.panelCadastrosSubmenu.Controls.Add(this.iconButton2);
-            this.panelCadastrosSubmenu.Controls.Add(this.iconButton1);
+            this.panelCadastrosSubmenu.Controls.Add(this.btnCadastroLocacoes);
+            this.panelCadastrosSubmenu.Controls.Add(this.btnCadastroClientes);
             this.panelCadastrosSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCadastrosSubmenu.Location = new System.Drawing.Point(0, 200);
             this.panelCadastrosSubmenu.Name = "panelCadastrosSubmenu";
-            this.panelCadastrosSubmenu.Size = new System.Drawing.Size(220, 100);
+            this.panelCadastrosSubmenu.Size = new System.Drawing.Size(250, 88);
             this.panelCadastrosSubmenu.TabIndex = 3;
             // 
-            // iconButton2
+            // btnCadastroLocacoes
             // 
-            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar._500Px;
-            this.iconButton2.IconColor = System.Drawing.Color.Black;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 38;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(0, 40);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.iconButton2.Size = new System.Drawing.Size(220, 40);
-            this.iconButton2.TabIndex = 1;
-            this.iconButton2.Text = "iconButton2";
-            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton2.UseVisualStyleBackColor = true;
+            this.btnCadastroLocacoes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCadastroLocacoes.FlatAppearance.BorderSize = 0;
+            this.btnCadastroLocacoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastroLocacoes.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.btnCadastroLocacoes.IconChar = FontAwesome.Sharp.IconChar.Key;
+            this.btnCadastroLocacoes.IconColor = System.Drawing.Color.Black;
+            this.btnCadastroLocacoes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCadastroLocacoes.IconSize = 38;
+            this.btnCadastroLocacoes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastroLocacoes.Location = new System.Drawing.Point(0, 40);
+            this.btnCadastroLocacoes.Name = "btnCadastroLocacoes";
+            this.btnCadastroLocacoes.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnCadastroLocacoes.Size = new System.Drawing.Size(250, 40);
+            this.btnCadastroLocacoes.TabIndex = 1;
+            this.btnCadastroLocacoes.Text = "Cadastro de Locações";
+            this.btnCadastroLocacoes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastroLocacoes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCadastroLocacoes.UseVisualStyleBackColor = true;
+            this.btnCadastroLocacoes.Click += new System.EventHandler(this.btnCadastroLocacoes_Click);
             // 
-            // iconButton1
+            // btnCadastroClientes
             // 
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar._500Px;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 38;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 0);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.iconButton1.Size = new System.Drawing.Size(220, 40);
-            this.iconButton1.TabIndex = 0;
-            this.iconButton1.Text = "iconButton1";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = true;
+            this.btnCadastroClientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCadastroClientes.FlatAppearance.BorderSize = 0;
+            this.btnCadastroClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastroClientes.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.btnCadastroClientes.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.btnCadastroClientes.IconColor = System.Drawing.Color.Black;
+            this.btnCadastroClientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCadastroClientes.IconSize = 38;
+            this.btnCadastroClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastroClientes.Location = new System.Drawing.Point(0, 0);
+            this.btnCadastroClientes.Name = "btnCadastroClientes";
+            this.btnCadastroClientes.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnCadastroClientes.Size = new System.Drawing.Size(250, 40);
+            this.btnCadastroClientes.TabIndex = 0;
+            this.btnCadastroClientes.Text = "Cadastro de Clientes";
+            this.btnCadastroClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastroClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCadastroClientes.UseVisualStyleBackColor = true;
+            this.btnCadastroClientes.Click += new System.EventHandler(this.btnCadastroClientes_Click);
             // 
             // btnCadastrar
             // 
@@ -274,7 +282,7 @@
             this.btnCadastrar.FlatAppearance.BorderSize = 0;
             this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.btnCadastrar.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
             this.btnCadastrar.IconColor = System.Drawing.Color.Black;
             this.btnCadastrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCadastrar.IconSize = 38;
@@ -282,7 +290,7 @@
             this.btnCadastrar.Location = new System.Drawing.Point(0, 150);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnCadastrar.Size = new System.Drawing.Size(220, 50);
+            this.btnCadastrar.Size = new System.Drawing.Size(250, 50);
             this.btnCadastrar.TabIndex = 2;
             this.btnCadastrar.Text = "Cadastros";
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -304,7 +312,7 @@
             this.btnPesquisar.Location = new System.Drawing.Point(0, 100);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnPesquisar.Size = new System.Drawing.Size(220, 50);
+            this.btnPesquisar.Size = new System.Drawing.Size(250, 50);
             this.btnPesquisar.TabIndex = 1;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -317,7 +325,7 @@
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(220, 100);
+            this.panelLogo.Size = new System.Drawing.Size(250, 100);
             this.panelLogo.TabIndex = 0;
             // 
             // Form1
@@ -343,16 +351,16 @@
         private System.Windows.Forms.Panel panelLogo;
         private FontAwesome.Sharp.IconButton btnPesquisar;
         private System.Windows.Forms.Panel panelCadastrosSubmenu;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnCadastroLocacoes;
+        private FontAwesome.Sharp.IconButton btnCadastroClientes;
         private FontAwesome.Sharp.IconButton btnCadastrar;
         private System.Windows.Forms.Panel panelRemoverSubmenu;
-        private FontAwesome.Sharp.IconButton iconButton7;
-        private FontAwesome.Sharp.IconButton iconButton8;
+        private FontAwesome.Sharp.IconButton btnRemoverLocacao;
+        private FontAwesome.Sharp.IconButton btnRemoveClientes;
         private FontAwesome.Sharp.IconButton btnRemover;
         private System.Windows.Forms.Panel panelAtualizarSubmenu;
-        private FontAwesome.Sharp.IconButton iconButton4;
-        private FontAwesome.Sharp.IconButton iconButton5;
+        private FontAwesome.Sharp.IconButton btnAtualizarLocacoes;
+        private FontAwesome.Sharp.IconButton btnAtualizarClientes;
         private FontAwesome.Sharp.IconButton btnAtualizar;
     }
 }

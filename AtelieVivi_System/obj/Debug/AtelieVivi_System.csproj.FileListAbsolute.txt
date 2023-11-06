@@ -10,3 +10,15 @@ C:\Users\lucas\source\repos\AtelieVivi_System\AtelieVivi_System\bin\Debug\FontAw
 C:\Users\lucas\source\repos\AtelieVivi_System\AtelieVivi_System\obj\Debug\AtelieVivi_System.csproj.CopyComplete
 C:\Users\lucas\source\repos\AtelieVivi_System\AtelieVivi_System\obj\Debug\AtelieVivi_System.exe
 C:\Users\lucas\source\repos\AtelieVivi_System\AtelieVivi_System\obj\Debug\AtelieVivi_System.pdb
+C:\Users\lucas\Documents\GitHub_Projects\AtelieVivi_System\AtelieVivi_System\bin\Debug\AtelieVivi_System.exe.config
+C:\Users\lucas\Documents\GitHub_Projects\AtelieVivi_System\AtelieVivi_System\bin\Debug\AtelieVivi_System.exe
+C:\Users\lucas\Documents\GitHub_Projects\AtelieVivi_System\AtelieVivi_System\bin\Debug\AtelieVivi_System.pdb
+C:\Users\lucas\Documents\GitHub_Projects\AtelieVivi_System\AtelieVivi_System\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\lucas\Documents\GitHub_Projects\AtelieVivi_System\AtelieVivi_System\obj\Debug\AtelieVivi_System.csproj.AssemblyReference.cache
+C:\Users\lucas\Documents\GitHub_Projects\AtelieVivi_System\AtelieVivi_System\obj\Debug\AtelieVivi_System.Form1.resources
+C:\Users\lucas\Documents\GitHub_Projects\AtelieVivi_System\AtelieVivi_System\obj\Debug\AtelieVivi_System.Properties.Resources.resources
+C:\Users\lucas\Documents\GitHub_Projects\AtelieVivi_System\AtelieVivi_System\obj\Debug\AtelieVivi_System.csproj.GenerateResource.cache
+C:\Users\lucas\Documents\GitHub_Projects\AtelieVivi_System\AtelieVivi_System\obj\Debug\AtelieVivi_System.csproj.CoreCompileInputs.cache
+C:\Users\lucas\Documents\GitHub_Projects\AtelieVivi_System\AtelieVivi_System\obj\Debug\AtelieVivi_System.csproj.CopyComplete
+C:\Users\lucas\Documents\GitHub_Projects\AtelieVivi_System\AtelieVivi_System\obj\Debug\AtelieVivi_System.exe
+C:\Users\lucas\Documents\GitHub_Projects\AtelieVivi_System\AtelieVivi_System\obj\Debug\AtelieVivi_System.pdb
