@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.panelRemoverSubmenu = new System.Windows.Forms.Panel();
             this.btnRemoverLocacao = new FontAwesome.Sharp.IconButton();
@@ -43,10 +44,17 @@
             this.btnCadastrar = new FontAwesome.Sharp.IconButton();
             this.btnPesquisar = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.panelTopBar = new System.Windows.Forms.Panel();
+            this.labelTopBar = new System.Windows.Forms.Label();
+            this.panelChildForm = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelSideMenu.SuspendLayout();
             this.panelRemoverSubmenu.SuspendLayout();
             this.panelAtualizarSubmenu.SuspendLayout();
             this.panelCadastrosSubmenu.SuspendLayout();
+            this.panelTopBar.SuspendLayout();
+            this.panelChildForm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -73,9 +81,9 @@
             this.panelRemoverSubmenu.Controls.Add(this.btnRemoverLocacao);
             this.panelRemoverSubmenu.Controls.Add(this.btnRemoveClientes);
             this.panelRemoverSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelRemoverSubmenu.Location = new System.Drawing.Point(0, 488);
+            this.panelRemoverSubmenu.Location = new System.Drawing.Point(0, 468);
             this.panelRemoverSubmenu.Name = "panelRemoverSubmenu";
-            this.panelRemoverSubmenu.Size = new System.Drawing.Size(250, 100);
+            this.panelRemoverSubmenu.Size = new System.Drawing.Size(250, 84);
             this.panelRemoverSubmenu.TabIndex = 7;
             // 
             // btnRemoverLocacao
@@ -84,14 +92,14 @@
             this.btnRemoverLocacao.FlatAppearance.BorderSize = 0;
             this.btnRemoverLocacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoverLocacao.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.btnRemoverLocacao.IconChar = FontAwesome.Sharp.IconChar._500Px;
+            this.btnRemoverLocacao.IconChar = FontAwesome.Sharp.IconChar.Xmark;
             this.btnRemoverLocacao.IconColor = System.Drawing.Color.Black;
             this.btnRemoverLocacao.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRemoverLocacao.IconSize = 38;
             this.btnRemoverLocacao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRemoverLocacao.Location = new System.Drawing.Point(0, 40);
             this.btnRemoverLocacao.Name = "btnRemoverLocacao";
-            this.btnRemoverLocacao.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnRemoverLocacao.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
             this.btnRemoverLocacao.Size = new System.Drawing.Size(250, 40);
             this.btnRemoverLocacao.TabIndex = 1;
             this.btnRemoverLocacao.Text = "Remover Locações";
@@ -133,7 +141,7 @@
             this.btnRemover.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRemover.IconSize = 38;
             this.btnRemover.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRemover.Location = new System.Drawing.Point(0, 438);
+            this.btnRemover.Location = new System.Drawing.Point(0, 418);
             this.btnRemover.Name = "btnRemover";
             this.btnRemover.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnRemover.Size = new System.Drawing.Size(250, 50);
@@ -150,9 +158,9 @@
             this.panelAtualizarSubmenu.Controls.Add(this.btnAtualizarLocacoes);
             this.panelAtualizarSubmenu.Controls.Add(this.btnAtualizarClientes);
             this.panelAtualizarSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelAtualizarSubmenu.Location = new System.Drawing.Point(0, 338);
+            this.panelAtualizarSubmenu.Location = new System.Drawing.Point(0, 334);
             this.panelAtualizarSubmenu.Name = "panelAtualizarSubmenu";
-            this.panelAtualizarSubmenu.Size = new System.Drawing.Size(250, 100);
+            this.panelAtualizarSubmenu.Size = new System.Drawing.Size(250, 84);
             this.panelAtualizarSubmenu.TabIndex = 5;
             // 
             // btnAtualizarLocacoes
@@ -161,14 +169,14 @@
             this.btnAtualizarLocacoes.FlatAppearance.BorderSize = 0;
             this.btnAtualizarLocacoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAtualizarLocacoes.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.btnAtualizarLocacoes.IconChar = FontAwesome.Sharp.IconChar._500Px;
+            this.btnAtualizarLocacoes.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
             this.btnAtualizarLocacoes.IconColor = System.Drawing.Color.Black;
             this.btnAtualizarLocacoes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAtualizarLocacoes.IconSize = 38;
             this.btnAtualizarLocacoes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAtualizarLocacoes.Location = new System.Drawing.Point(0, 40);
             this.btnAtualizarLocacoes.Name = "btnAtualizarLocacoes";
-            this.btnAtualizarLocacoes.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnAtualizarLocacoes.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
             this.btnAtualizarLocacoes.Size = new System.Drawing.Size(250, 40);
             this.btnAtualizarLocacoes.TabIndex = 1;
             this.btnAtualizarLocacoes.Text = "Atualizar Locações";
@@ -210,7 +218,7 @@
             this.btnAtualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAtualizar.IconSize = 38;
             this.btnAtualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAtualizar.Location = new System.Drawing.Point(0, 288);
+            this.btnAtualizar.Location = new System.Drawing.Point(0, 284);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnAtualizar.Size = new System.Drawing.Size(250, 50);
@@ -229,7 +237,7 @@
             this.panelCadastrosSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCadastrosSubmenu.Location = new System.Drawing.Point(0, 200);
             this.panelCadastrosSubmenu.Name = "panelCadastrosSubmenu";
-            this.panelCadastrosSubmenu.Size = new System.Drawing.Size(250, 88);
+            this.panelCadastrosSubmenu.Size = new System.Drawing.Size(250, 84);
             this.panelCadastrosSubmenu.TabIndex = 3;
             // 
             // btnCadastroLocacoes
@@ -238,14 +246,14 @@
             this.btnCadastroLocacoes.FlatAppearance.BorderSize = 0;
             this.btnCadastroLocacoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastroLocacoes.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.btnCadastroLocacoes.IconChar = FontAwesome.Sharp.IconChar.Key;
+            this.btnCadastroLocacoes.IconChar = FontAwesome.Sharp.IconChar.LocationDot;
             this.btnCadastroLocacoes.IconColor = System.Drawing.Color.Black;
             this.btnCadastroLocacoes.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCadastroLocacoes.IconSize = 38;
+            this.btnCadastroLocacoes.IconSize = 36;
             this.btnCadastroLocacoes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastroLocacoes.Location = new System.Drawing.Point(0, 40);
             this.btnCadastroLocacoes.Name = "btnCadastroLocacoes";
-            this.btnCadastroLocacoes.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnCadastroLocacoes.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
             this.btnCadastroLocacoes.Size = new System.Drawing.Size(250, 40);
             this.btnCadastroLocacoes.TabIndex = 1;
             this.btnCadastroLocacoes.Text = "Cadastro de Locações";
@@ -328,11 +336,54 @@
             this.panelLogo.Size = new System.Drawing.Size(250, 100);
             this.panelLogo.TabIndex = 0;
             // 
+            // panelTopBar
+            // 
+            this.panelTopBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(213)))), ((int)(((byte)(66)))));
+            this.panelTopBar.Controls.Add(this.labelTopBar);
+            this.panelTopBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTopBar.Location = new System.Drawing.Point(250, 0);
+            this.panelTopBar.Name = "panelTopBar";
+            this.panelTopBar.Size = new System.Drawing.Size(748, 100);
+            this.panelTopBar.TabIndex = 1;
+            // 
+            // labelTopBar
+            // 
+            this.labelTopBar.AutoSize = true;
+            this.labelTopBar.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.labelTopBar.Location = new System.Drawing.Point(30, 61);
+            this.labelTopBar.Name = "labelTopBar";
+            this.labelTopBar.Size = new System.Drawing.Size(53, 20);
+            this.labelTopBar.TabIndex = 0;
+            this.labelTopBar.Text = "label1";
+            // 
+            // panelChildForm
+            // 
+            this.panelChildForm.BackColor = System.Drawing.SystemColors.Control;
+            this.panelChildForm.Controls.Add(this.pictureBox1);
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildForm.Location = new System.Drawing.Point(250, 100);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.Size = new System.Drawing.Size(748, 500);
+            this.panelChildForm.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(216, 100);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(342, 270);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(998, 600);
+            this.Controls.Add(this.panelChildForm);
+            this.Controls.Add(this.panelTopBar);
             this.Controls.Add(this.panelSideMenu);
             this.MinimumSize = new System.Drawing.Size(1014, 639);
             this.Name = "Form1";
@@ -341,6 +392,10 @@
             this.panelRemoverSubmenu.ResumeLayout(false);
             this.panelAtualizarSubmenu.ResumeLayout(false);
             this.panelCadastrosSubmenu.ResumeLayout(false);
+            this.panelTopBar.ResumeLayout(false);
+            this.panelTopBar.PerformLayout();
+            this.panelChildForm.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -362,6 +417,10 @@
         private FontAwesome.Sharp.IconButton btnAtualizarLocacoes;
         private FontAwesome.Sharp.IconButton btnAtualizarClientes;
         private FontAwesome.Sharp.IconButton btnAtualizar;
+        private System.Windows.Forms.Panel panelTopBar;
+        private System.Windows.Forms.Label labelTopBar;
+        private System.Windows.Forms.Panel panelChildForm;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

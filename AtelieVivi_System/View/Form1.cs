@@ -57,24 +57,11 @@ namespace AtelieVivi_System
         {
 
         }
-
+        #region Cadastrar
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             showSubMenu(panelCadastrosSubmenu);
         }
-
-        private void btnAtualizar_Click(object sender, EventArgs e)
-        {
-            showSubMenu(panelAtualizarSubmenu);
-
-        }
-
-        private void btnRemover_Click(object sender, EventArgs e)
-        {
-            showSubMenu(panelRemoverSubmenu);
-
-        }
-
         private void btnCadastroClientes_Click(object sender, EventArgs e)
         {
             hideSubMenu();
@@ -84,7 +71,14 @@ namespace AtelieVivi_System
         {
             hideSubMenu();
         }
+        #endregion
 
+        #region Atualizar
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelAtualizarSubmenu);
+
+        }
         private void btnAtualizarClientes_Click(object sender, EventArgs e)
         {
             hideSubMenu();
@@ -93,6 +87,14 @@ namespace AtelieVivi_System
         private void btnAtualizarLocacoes_Click(object sender, EventArgs e)
         {
             hideSubMenu();
+        }
+        #endregion
+
+        #region Remover
+        private void btnRemover_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelRemoverSubmenu);
+
         }
 
         private void btnRemoveClientes_Click(object sender, EventArgs e)
@@ -103,6 +105,22 @@ namespace AtelieVivi_System
         private void btnRemoverLocacao_Click(object sender, EventArgs e)
         {
             hideSubMenu();
+        }
+        #endregion
+
+        private Form activeForm = null;
+        private void openChildFormInPanel(Form childForm)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(childForm);
+            panelChildForm.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
         }
     }
 }
