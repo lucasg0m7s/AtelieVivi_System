@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace AtelieVivi_System.View
 {
-    public partial class Cadastro_Clientes : Form
+    public partial class Home : Form
     {
-        public Cadastro_Clientes()
+        public Home()
         {
             InitializeComponent();
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

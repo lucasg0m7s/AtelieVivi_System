@@ -22,3 +22,5 @@ C:\Users\lucas\Documents\GitHub_Projects\AtelieVivi_System\AtelieVivi_System\obj
 C:\Users\lucas\Documents\GitHub_Projects\AtelieVivi_System\AtelieVivi_System\obj\Debug\AtelieVivi_System.csproj.CopyComplete
 C:\Users\lucas\Documents\GitHub_Projects\AtelieVivi_System\AtelieVivi_System\obj\Debug\AtelieVivi_System.exe
 C:\Users\lucas\Documents\GitHub_Projects\AtelieVivi_System\AtelieVivi_System\obj\Debug\AtelieVivi_System.pdb
+C:\Users\lucas\Documents\GitHub_Projects\AtelieVivi_System\AtelieVivi_System\obj\Debug\AtelieVivi_System.View.Cadastro_Clientes.resources
+C:\Users\lucas\Documents\GitHub_Projects\AtelieVivi_System\AtelieVivi_System\obj\Debug\AtelieVivi_System.View.Home.resources
