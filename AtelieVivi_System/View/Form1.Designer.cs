@@ -52,6 +52,7 @@
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.labelTopBar = new System.Windows.Forms.Label();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.btnHome = new FontAwesome.Sharp.IconButton();
             this.panelSideMenu.SuspendLayout();
             this.panelRemoverSubmenu.SuspendLayout();
             this.panelAtualizarSubmenu.SuspendLayout();
@@ -380,6 +381,7 @@
             // panelTopBar
             // 
             this.panelTopBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(213)))), ((int)(((byte)(66)))));
+            this.panelTopBar.Controls.Add(this.btnHome);
             this.panelTopBar.Controls.Add(this.btnMinimize);
             this.panelTopBar.Controls.Add(this.btnMaximize);
             this.panelTopBar.Controls.Add(this.btnClose);
@@ -461,6 +463,23 @@
             this.panelChildForm.Size = new System.Drawing.Size(748, 500);
             this.panelChildForm.TabIndex = 2;
             // 
+            // btnHome
+            // 
+            this.btnHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHome.BackColor = System.Drawing.Color.SlateGray;
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.IconChar = FontAwesome.Sharp.IconChar.House;
+            this.btnHome.IconColor = System.Drawing.Color.White;
+            this.btnHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnHome.IconSize = 30;
+            this.btnHome.Location = new System.Drawing.Point(613, 0);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(36, 30);
+            this.btnHome.TabIndex = 4;
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -509,6 +528,7 @@
         private FontAwesome.Sharp.IconButton btnMaximize;
         private FontAwesome.Sharp.IconButton btnClose;
         private FontAwesome.Sharp.IconButton btnMinimize;
+        private FontAwesome.Sharp.IconButton btnHome;
     }
 }
 

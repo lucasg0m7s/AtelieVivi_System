@@ -25,7 +25,7 @@ namespace AtelieVivi_System
             customizeDesing();
             CollapseMenu();
             this.Padding = new Padding(borderSize);//Border size
-            this.BackColor = Color.FromArgb(250, 213, 66);//Border color
+            this.BackColor = Color.FromArgb(0,0,0);//Border color
             openChildFormInPanel(new Home());
         }
 
@@ -350,6 +350,11 @@ namespace AtelieVivi_System
                     menuButton.Padding = new Padding(35, 0, 0, 0);
                 }
             }
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            openChildFormInPanel(new Home());
         }
     }
 }
