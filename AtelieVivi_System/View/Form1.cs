@@ -27,6 +27,10 @@ namespace AtelieVivi_System
             this.Padding = new Padding(borderSize);//Border size
             this.BackColor = Color.FromArgb(0,0,0);//Border color
             openChildFormInPanel(new Home());
+            Rectangle rect = Screen.FromHandle(this.Handle).WorkingArea;
+            rect.Width = rect.Width - borderSize;
+            rect.Height = rect.Height - borderSize;
+            this.MaximizedBounds = rect;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -240,7 +244,7 @@ namespace AtelieVivi_System
 
         private void Form1_Resize(object sender, EventArgs e)
         {
-            AdjustForm();
+            
         }
 
         private void AdjustForm()
@@ -259,7 +263,7 @@ namespace AtelieVivi_System
 
         private void btnMinimize_Click(object sender, EventArgs e)
         {
-            formSize = this.ClientSize;
+            this.Size = formSize;
             this.WindowState = FormWindowState.Minimized;
         }
 
