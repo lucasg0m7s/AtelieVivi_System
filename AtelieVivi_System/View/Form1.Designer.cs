@@ -465,10 +465,10 @@
             // 
             this.labelTopBar.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelTopBar.AutoSize = true;
-            this.labelTopBar.Font = new System.Drawing.Font("Microsoft YaHei", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTopBar.Font = new System.Drawing.Font("Yu Gothic", 20F);
             this.labelTopBar.Location = new System.Drawing.Point(26, 33);
             this.labelTopBar.Name = "labelTopBar";
-            this.labelTopBar.Size = new System.Drawing.Size(73, 27);
+            this.labelTopBar.Size = new System.Drawing.Size(88, 35);
             this.labelTopBar.TabIndex = 0;
             this.labelTopBar.Text = "Home";
             // 
@@ -490,7 +490,9 @@
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelTopBar);
             this.Controls.Add(this.panelSideMenu);
+            this.MinimumSize = new System.Drawing.Size(1014, 639);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Resize += new System.EventHandler(this.Form1_Resize);
             this.panelSideMenu.ResumeLayout(false);
