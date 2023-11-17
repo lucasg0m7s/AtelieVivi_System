@@ -71,6 +71,8 @@
   <ItemGroup>
     <Compile Include="Model\Clientes.cs" />
     <Compile Include="Model\Locacoes.cs" />
+    <Compile Include="Repositorios\ClienteRepositorio.cs" />
+    <Compile Include="Repositorios\Conexao.cs" />
     <Compile Include="Servicos\ClienteServico.cs" />
     <Compile Include="View\Cadastro_Clientes.cs">
       <SubType>Form</SubType>
@@ -124,8 +126,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Repositorios\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -81,3 +81,5 @@ add constraint FK_Estados_Cidades
 Foreign Key (Id_Estado)
 References Estados (Id_estado);
 
+insert into Estados (Estado) values ('SP');
+insert into Cidades (Id_cidade, Cidade, Id_Estado) values (1, 'Nova Odessa', 1), (2, 'Sumaré', 1), (3, 'Americana', 1);
