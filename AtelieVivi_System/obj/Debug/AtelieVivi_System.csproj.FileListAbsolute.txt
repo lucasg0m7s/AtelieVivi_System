@@ -33,3 +33,4 @@ C:\Users\lucas\Documents\GitHub_Projects\AtelieVivi_System\AtelieVivi_System\bin
 C:\Users\lucas\Documents\GitHub_Projects\AtelieVivi_System\AtelieVivi_System\bin\Debug\ComponentFactory.Krypton.Navigator.pdb
 C:\Users\lucas\Documents\GitHub_Projects\AtelieVivi_System\AtelieVivi_System\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
 C:\Users\lucas\Documents\GitHub_Projects\AtelieVivi_System\AtelieVivi_System\bin\Debug\ComponentFactory.Krypton.Workspace.pdb
+C:\Users\lucas\Documents\GitHub_Projects\AtelieVivi_System\AtelieVivi_System\obj\Debug\AtelieVivi_System.View.Cadastro_Locacoes.resources

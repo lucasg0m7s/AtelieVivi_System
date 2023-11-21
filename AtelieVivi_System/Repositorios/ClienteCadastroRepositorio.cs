@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace AtelieVivi_System.Repositorios
 {
-    public class ClienteRepositorio
+    public class ClienteCadastroRepositorio
     {
         SqlCommand cmd = new SqlCommand();
         Conexao conn = new Conexao();

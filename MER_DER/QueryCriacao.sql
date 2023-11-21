@@ -6,9 +6,9 @@ create table Clientes(
 	Sobrenome varchar(20) not null,
 	Logradouro varchar(20) not null,
 	Complemento varchar(20) not null,
-	Rua varchar(20) not null,
+	Rua varchar(50) not null,
 	Bairro varchar(20) not null,
-	Numero int not null,
+	Numero varchar(5) not null,
 	RG char(9) not null Unique,
 	Celular char(11) not null Unique,
 	User_Insta varchar(20) not null,
@@ -30,25 +30,16 @@ create table Locacoes(
 	Id_Locacao int Primary Key not null Identity(1,1),
 	Data_Locacao date not null,
 	Horario_Locacao time not null,
+	Nome_Aniversariante varchar(20) not null,
+	Sobrenome_Aniversariante varchar(20) not null,
+	Tema varchar(20) not null,
 	Logradouro varchar(20) not null,
 	Complemento varchar(20) not null,
-	Rua varchar(20) not null,
+	Rua varchar(50) not null,
 	Bairro varchar(20) not null,
-	Numero int not null,
+	Numero varchar(5) not null,
 	Id_Cidade int not null,
 	CPF_cliente char(11) not null,
-	Id_Aniversariante int not null,
-	Nome_Tema varchar(30) not null
-);
-
-create table Aniversariantes(
-	Id_Aniversariante int Primary key identity(1,1),
-	Nome varchar(20) not null,
-	Sobrenome varchar(20) not null
-);
-
-create table Temas(
-	Nome_Tema varchar(20) Primary key not null
 );
 
 alter table locacoes
@@ -60,16 +51,6 @@ alter table locacoes
 add constraint FK_Clientes_Locacoes
 Foreign Key (CPF_Cliente)
 References Clientes (Cpf);
-
-alter table locacoes
-add constraint FK_Aniversariantes_Locacoes
-Foreign Key (Id_Aniversariante)
-References Aniversariantes (Id_Aniversariante);
-
-alter table locacoes
-add constraint FK_Temas_Locacoes
-Foreign Key (Nome_Tema)
-References Temas (Nome_Tema);
 
 alter table clientes
 add constraint FK_Cidades_Clientes

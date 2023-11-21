@@ -18,23 +18,7 @@ namespace AtelieVivi_System.View
         public Cadastro_Clientes()
         {
             InitializeComponent();
-            ClienteServico.AtribuirComboCidade(ref comboCidade);
-            ClienteServico.LimparCampos(mskCPF, txtNome, txtSobrenome, txtComplemento, txtLogradouro, txtRua, txtBairro, txtNumero, mskRG, mskCelular, txtInsta, comboCidade);
-        }
-
-        private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            ClienteServico.ApenasLetrasEspaço(sender, e);
-        }
-
-        private void txtSobrenome_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            ClienteServico.ApenasLetrasEspaço(sender, e);
-        }
-
-        private void txtComplemento_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            ClienteServico.ApenasLetras(sender, e);
+            ClienteCadastroServico.AtribuirComboCidade(ref comboCidade);
         }
 
         private void btnCadastrar_Click_1(object sender, EventArgs e)
@@ -52,24 +36,39 @@ namespace AtelieVivi_System.View
                 RG = mskRG.Text,
                 Celular = mskCelular.Text,
                 User_Insta = txtInsta.Text,
-                Id_Cidade = ClienteServico.ObterComboCidade(comboCidade.Text)
+                Id_Cidade = ClienteCadastroServico.ObterComboCidade(comboCidade.Text)
             };
-            ClienteServico.ValidarCampos_e_Cadastrar(cliente, mskCPF, mskRG, mskCelular);
+            ClienteCadastroServico.ValidarCampos_e_Cadastrar(cliente, mskCPF, mskRG, mskCelular, txtNome, txtSobrenome, txtComplemento, txtLogradouro, txtRua, txtBairro, txtNumero, txtInsta);
         }
 
         private void txtBairro_KeyPress(object sender, KeyPressEventArgs e)
         {
-            ClienteServico.ApenasLetrasEspaço(sender, e);
+            ClienteCadastroServico.ApenasLetras(sender, e);
         }
 
         private void txtLogradouro_KeyPress(object sender, KeyPressEventArgs e)
         {
-            ClienteServico.ApenasLetrasEspaço(sender, e);
+            ClienteCadastroServico.ApenasLetras(sender, e);
         }
 
         private void txtInsta_KeyPress(object sender, KeyPressEventArgs e)
         {
-            ClienteServico.NoSpaces(sender, e);
+            ClienteCadastroServico.NoSpaces(sender, e);
+        }
+
+        private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ClienteCadastroServico.ApenasLetras(sender, e);
+        }
+
+        private void txtSobrenome_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ClienteCadastroServico.ApenasLetras(sender, e);
+        }
+
+        private void txtComplemento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ClienteCadastroServico.ApenasLetras(sender, e);
         }
     }
 }

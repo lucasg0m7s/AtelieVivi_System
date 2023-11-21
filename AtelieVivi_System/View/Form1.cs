@@ -144,6 +144,7 @@ namespace AtelieVivi_System
         {
 
         }
+
         #region Cadastrar
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
@@ -157,6 +158,7 @@ namespace AtelieVivi_System
 
         private void btnCadastroLocacoes_Click(object sender, EventArgs e)
         {
+            openChildFormInPanel(new Cadastro_Locacoes());
             hideSubMenu();
         }
         #endregion
@@ -227,9 +229,15 @@ namespace AtelieVivi_System
         private void btnMaximize_Click(object sender, EventArgs e)
         {
             if (WindowState == FormWindowState.Normal)
+            {
                 this.WindowState = FormWindowState.Maximized;
+            }
             else
+            {
                 this.WindowState = FormWindowState.Normal;
+                this.Width =  1014; 
+                this.Height = 639;
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)

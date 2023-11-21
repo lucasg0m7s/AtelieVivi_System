@@ -11,17 +11,18 @@ using System.Windows.Forms;
 
 namespace AtelieVivi_System.Servicos
 {
-    public class ClienteServico
+    public class ClienteCadastroServico
     {
         
         public static void AtribuirComboCidade(ref ComboBox Cidade)
         {
-            ClienteRepositorio clienteRepositorio = new ClienteRepositorio();
+            ClienteCadastroRepositorio clienteRepositorio = new ClienteCadastroRepositorio();
             if (clienteRepositorio.AtribuirComboCidade(ref Cidade) != "")
             {
                 MessageBox.Show(clienteRepositorio.message, "Ocorreu um problema", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         public static int ObterComboCidade(string Cidade)
         {
             int Id_Cidade = 0;
@@ -51,8 +52,7 @@ namespace AtelieVivi_System.Servicos
             cliente.User_Insta = cliente.User_Insta.Trim().ToLower();
         }
 
-
-        public static void ValidarCampos_e_Cadastrar(Clientes cliente, MaskedTextBox CPF, MaskedTextBox RG, MaskedTextBox Celular)
+        public static void ValidarCampos_e_Cadastrar(Clientes cliente, MaskedTextBox CPF, MaskedTextBox RG, MaskedTextBox Celular, TextBox Nome, TextBox Sobrenome, TextBox Complemento, TextBox Logradouro, TextBox Rua, TextBox Bairro, TextBox Numero, TextBox User_Insta)
         {
             TratarCampos(cliente);
             if (CPF.MaskCompleted && RG.MaskCompleted && Celular.MaskCompleted && cliente.Id_Cidade != 0)
@@ -75,23 +75,47 @@ namespace AtelieVivi_System.Servicos
                 MessageBox.Show("Existem campos incompletos. Por favor, preencha todos os campos corretamente.", "Verifique os campos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            Cadastrar(cliente);
+            if (Cadastrar(cliente))
+            {
+                LimparCampos(CPF, Nome, Sobrenome, Complemento, Logradouro, Rua, Bairro, Numero, RG, Celular, User_Insta);
+            }
         }
-        private static void Cadastrar(Clientes cliente)
+
+        private static bool Cadastrar(Clientes cliente)
         {
-            ClienteRepositorio clienteRepositorio = new ClienteRepositorio();
+            ClienteCadastroRepositorio clienteRepositorio = new ClienteCadastroRepositorio();
             clienteRepositorio.Cadastrar(cliente);
             if (clienteRepositorio.error)
             {
                 MessageBox.Show(clienteRepositorio.message, "Ocorreu um problema.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
             else
             {
                 MessageBox.Show(clienteRepositorio.message, "Sucesso.", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Cadastro_Clientes cad = new Cadastro_Clientes();
+                return true;
             }
         }
-        public static void LimparCampos(MaskedTextBox CPF, TextBox Nome, TextBox Sobrenome, TextBox Complemento, TextBox Logradouro, TextBox Rua, TextBox Bairro, TextBox Numero, MaskedTextBox RG, MaskedTextBox Celular, TextBox User_Insta, ComboBox Id_Cidade)
+
+        public static void ApenasLetras(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+                MessageBox.Show("Este campo aceita apenas letras!", "Atenção.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        public static void ApenasLetrasEspaço(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !(e.KeyChar == (char)Keys.Back) && !(e.KeyChar == (char)Keys.Space) && !(e.KeyChar == (char)Keys.ControlKey))
+            {
+                e.Handled = true;
+                MessageBox.Show("Este campo não aceita esse tipo de caracter!", "Atenção.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        public static void LimparCampos(MaskedTextBox CPF, TextBox Nome, TextBox Sobrenome, TextBox Complemento, TextBox Logradouro, TextBox Rua, TextBox Bairro, TextBox Numero, MaskedTextBox RG, MaskedTextBox Celular, TextBox User_Insta)
         {
             CPF.Text = "";
             Nome.Text = "";
@@ -104,26 +128,8 @@ namespace AtelieVivi_System.Servicos
             RG.Text = "";
             Celular.Text = "";
             User_Insta.Text = "";
-            Id_Cidade.Text = "";
         }
 
-        public static void ApenasLetras(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsLetter(e.KeyChar) && !(e.KeyChar == (char)Keys.Back))
-            {
-                e.Handled = true;
-                MessageBox.Show("Este campo aceita apenas letras!", "Atenção.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-        }
-
-        public static void ApenasLetrasEspaço(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsLetter(e.KeyChar) && !(e.KeyChar == (char)Keys.Back) && !(e.KeyChar == (char)Keys.Space))
-            {
-                e.Handled = true;
-                MessageBox.Show("Este campo não aceita esse tipo de caracter!", "Atenção.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-        }
         public static void NoSpaces(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Space)
