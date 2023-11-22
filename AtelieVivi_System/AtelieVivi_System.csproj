@@ -71,12 +71,20 @@
   <ItemGroup>
     <Compile Include="Model\Clientes.cs" />
     <Compile Include="Model\Locacoes.cs" />
+    <Compile Include="Repositorios\ClientesAtualizarRepositorio.cs" />
     <Compile Include="Repositorios\LocacaoCadastroRepositorio.cs" />
     <Compile Include="Repositorios\ClienteCadastroRepositorio.cs" />
     <Compile Include="Repositorios\Conexao.cs" />
     <Compile Include="Servicos\ClienteCadastroServico.cs" />
+    <Compile Include="Servicos\ClientesAtualizarServicos.cs" />
     <Compile Include="Servicos\LocacaoCadastroServico.cs" />
     <Compile Include="Servicos\Validacao_Eventos.cs" />
+    <Compile Include="View\Atualizacao_Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Atualizacao_Clientes.Designer.cs">
+      <DependentUpon>Atualizacao_Clientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Cadastro_Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +111,9 @@
     <Compile Include="View\Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\Atualizacao_Clientes.resx">
+      <DependentUpon>Atualizacao_Clientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Cadastro_Clientes.resx">
       <DependentUpon>Cadastro_Clientes.cs</DependentUpon>
     </EmbeddedResource>
