@@ -70,7 +70,7 @@ namespace AtelieVivi_System.Repositorios
         {
             error = false;
 
-            cmd.CommandText = "INSERT INTO Locacoes (DATA_LOCACAO, HORARIO_LOCACAO, Nome_Aniversariante, Sobrenome_Aniversariante, Complemento, Logradouro, Rua, Bairro, Numero, Id_Cidade, CPF_CLIENTE, Tema) VALUES (CONVERT(DATE, '@DATA_LOCACAO', 103), @HORARIO_LOCACAO, @Nome_Aniversariante, @Sobrenome_Aniversariante, @Complemento, @Logradouro, @Rua, @Bairro, @Numero, @Id_Cidade, @CPF_CLIENTE, @Tema)";
+            cmd.CommandText = "INSERT INTO Locacoes (DATA_LOCACAO, HORARIO_LOCACAO, Nome_Aniversariante, Sobrenome_Aniversariante, Complemento, Logradouro, Rua, Bairro, Numero, Id_Cidade, CPF_CLIENTE, Tema) VALUES (@DATA_LOCACAO, @HORARIO_LOCACAO, @Nome_Aniversariante, @Sobrenome_Aniversariante, @Complemento, @Logradouro, @Rua, @Bairro, @Numero, @Id_Cidade, @CPF_CLIENTE, @Tema)";
             cmd.Parameters.AddWithValue("@DATA_LOCACAO", locacao.Data_Locacao);
             cmd.Parameters.AddWithValue("@HORARIO_LOCACAO", locacao.Horario_Locacao);
             cmd.Parameters.AddWithValue("@Nome_Aniversariante", locacao.Nome_Aniversariante);
@@ -82,7 +82,7 @@ namespace AtelieVivi_System.Repositorios
             cmd.Parameters.AddWithValue("@Numero", locacao.Numero);
             cmd.Parameters.AddWithValue("@Id_Cidade", locacao.Id_Cidade);
             cmd.Parameters.AddWithValue("@CPF_CLIENTE", locacao.CPF_Cliente);
-            cmd.Parameters.AddWithValue("@Tema", locacao.CPF_Cliente);
+            cmd.Parameters.AddWithValue("@Tema", locacao.Tema);
 
 
             try

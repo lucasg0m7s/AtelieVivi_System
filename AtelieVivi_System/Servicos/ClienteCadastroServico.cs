@@ -97,24 +97,6 @@ namespace AtelieVivi_System.Servicos
             }
         }
 
-        public static void ApenasLetras(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Back)
-            {
-                e.Handled = true;
-                MessageBox.Show("Este campo aceita apenas letras!", "Atenção.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-        }
-
-        public static void ApenasLetrasEspaço(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsLetter(e.KeyChar) && !(e.KeyChar == (char)Keys.Back) && !(e.KeyChar == (char)Keys.Space) && !(e.KeyChar == (char)Keys.ControlKey))
-            {
-                e.Handled = true;
-                MessageBox.Show("Este campo não aceita esse tipo de caracter!", "Atenção.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-        }
-
         public static void LimparCampos(MaskedTextBox CPF, TextBox Nome, TextBox Sobrenome, TextBox Complemento, TextBox Logradouro, TextBox Rua, TextBox Bairro, TextBox Numero, MaskedTextBox RG, MaskedTextBox Celular, TextBox User_Insta)
         {
             CPF.Text = "";
@@ -128,15 +110,6 @@ namespace AtelieVivi_System.Servicos
             RG.Text = "";
             Celular.Text = "";
             User_Insta.Text = "";
-        }
-
-        public static void NoSpaces(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)Keys.Space)
-            {
-                e.Handled = true;
-                MessageBox.Show("Este campo não aceita espaços", "Atenção.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-        }
+        } 
     }
 }

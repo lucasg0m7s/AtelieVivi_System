@@ -76,10 +76,13 @@ namespace AtelieVivi_System.Servicos
             locacao.Bairro = locacao.Bairro.Trim().ToUpper();
             locacao.Numero = locacao.Numero.Trim().ToUpper();
             locacao.CPF_Cliente = locacao.CPF_Cliente.Replace(".", "").Replace("-", "");
+            DateTime dataConvertida = DateTime.ParseExact(locacao.Data_Locacao, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+            locacao.Data_Locacao = dataConvertida.ToString("yyyy-MM-dd");
         }
 
         public static void ValidarCampos_e_Cadastrar(Locacoes locacao, MaskedTextBox Data, MaskedTextBox Hora, TextBox Nome_Aniversariante, TextBox Sobrenome_Aniversariante, TextBox Tema, TextBox Complemento, TextBox Logradouro, TextBox Rua, TextBox Bairro, TextBox Numero)
         {
+            
             if (Data.MaskCompleted && Hora.MaskCompleted && locacao.Id_Cidade != 0 && locacao.CPF_Cliente != "0")
             {
                 if (ValidarData(Data))
@@ -87,6 +90,7 @@ namespace AtelieVivi_System.Servicos
                     if (ValidarHora(Hora))
                     {
                         TratarCampos(locacao);
+                        MessageBox.Show(locacao.Horario_Locacao);
                         Type tipoDoObjeto = locacao.GetType();
                         PropertyInfo[] propriedades = tipoDoObjeto.GetProperties();
 

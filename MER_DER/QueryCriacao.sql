@@ -4,10 +4,10 @@ create table Clientes(
 	CPF char(11) Primary Key not null,
 	Nome varchar(20) not null,
 	Sobrenome varchar(20) not null,
-	Logradouro varchar(20) not null,
+	Logradouro varchar(30) not null,
 	Complemento varchar(20) not null,
 	Rua varchar(50) not null,
-	Bairro varchar(20) not null,
+	Bairro varchar(50) not null,
 	Numero varchar(5) not null,
 	RG char(9) not null Unique,
 	Celular char(11) not null Unique,
@@ -33,10 +33,10 @@ create table Locacoes(
 	Nome_Aniversariante varchar(20) not null,
 	Sobrenome_Aniversariante varchar(20) not null,
 	Tema varchar(20) not null,
-	Logradouro varchar(20) not null,
+	Logradouro varchar(30) not null,
 	Complemento varchar(20) not null,
 	Rua varchar(50) not null,
-	Bairro varchar(20) not null,
+	Bairro varchar(50) not null,
 	Numero varchar(5) not null,
 	Id_Cidade int not null,
 	CPF_cliente char(11) not null,
@@ -64,3 +64,4 @@ References Estados (Id_estado);
 
 insert into Estados (Estado) values ('SP');
 insert into Cidades (Id_cidade, Cidade, Id_Estado) values (1, 'Nova Odessa', 1), (2, 'Sumaré', 1), (3, 'Americana', 1);
+

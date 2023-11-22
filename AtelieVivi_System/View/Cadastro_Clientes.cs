@@ -41,34 +41,84 @@ namespace AtelieVivi_System.View
             ClienteCadastroServico.ValidarCampos_e_Cadastrar(cliente, mskCPF, mskRG, mskCelular, txtNome, txtSobrenome, txtComplemento, txtLogradouro, txtRua, txtBairro, txtNumero, txtInsta);
         }
 
-        private void txtBairro_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtNome_KeyDown(object sender, KeyEventArgs e)
         {
-            ClienteCadastroServico.ApenasLetras(sender, e);
+           Validacao_Eventos.PermitirCTRL_Letras(sender, e);
         }
 
-        private void txtLogradouro_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtNome_TextChanged(object sender, EventArgs e)
         {
-            ClienteCadastroServico.ApenasLetras(sender, e);
+            Validacao_Eventos.VerificarConteudoCampo_Letras(txtNome);
         }
 
-        private void txtInsta_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtSobrenome_KeyDown(object sender, KeyEventArgs e)
         {
-            ClienteCadastroServico.NoSpaces(sender, e);
+            Validacao_Eventos.PermitirCTRL_Letras(sender, e);
         }
 
-        private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtSobrenome_TextChanged(object sender, EventArgs e)
         {
-            ClienteCadastroServico.ApenasLetras(sender, e);
+            Validacao_Eventos.VerificarConteudoCampo_Letras(txtSobrenome);
         }
 
-        private void txtSobrenome_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtInsta_TextChanged(object sender, EventArgs e)
         {
-            ClienteCadastroServico.ApenasLetras(sender, e);
+            Validacao_Eventos.VerificarConteudoCampo_SemEspacos(txtInsta);
         }
 
-        private void txtComplemento_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtInsta_KeyDown(object sender, KeyEventArgs e)
         {
-            ClienteCadastroServico.ApenasLetras(sender, e);
+            Validacao_Eventos.PermitirCTRL_SemEspaco(sender, e);
+        }
+
+        private void txtLogradouro_TextChanged(object sender, EventArgs e)
+        {
+            Validacao_Eventos.VerificarConteudoCampo_LetrasEspacos(txtLogradouro);
+        }
+
+        private void txtLogradouro_KeyDown(object sender, KeyEventArgs e)
+        {
+            Validacao_Eventos.PermitirCTRL_LetrasEspacos(sender, e);
+        }
+
+        private void txtComplemento_TextChanged(object sender, EventArgs e)
+        {
+            Validacao_Eventos.VerificarConteudoCampo_LetrasEspacos(txtComplemento);
+        }
+
+        private void txtComplemento_KeyDown(object sender, KeyEventArgs e)
+        {
+            Validacao_Eventos.PermitirCTRL_LetrasEspacos(sender, e);
+        }
+
+        private void txtBairro_TextChanged(object sender, EventArgs e)
+        {
+            Validacao_Eventos.VerificarConteudoCampo_LetrasEspacos(txtBairro);
+        }
+
+        private void txtBairro_KeyDown(object sender, KeyEventArgs e)
+        {
+            Validacao_Eventos.PermitirCTRL_LetrasEspacos(sender, e);
+        }
+
+        private void txtNumero_TextChanged(object sender, EventArgs e)
+        {
+            Validacao_Eventos.VerificarConteudoCampo_LetrasNumeros(txtNumero);
+        }
+
+        private void txtNumero_KeyDown(object sender, KeyEventArgs e)
+        {
+            Validacao_Eventos.PermitirCTRL_LetrasNumeros(sender, e);
+        }
+
+        private void txtRua_TextChanged(object sender, EventArgs e)
+        {
+            Validacao_Eventos.VerificarConteudoCampo_LetrasEspacos(txtRua);
+        }
+
+        private void txtRua_KeyDown(object sender, KeyEventArgs e)
+        {
+            Validacao_Eventos.PermitirCTRL_LetrasEspacos(sender, e);
         }
     }
 }

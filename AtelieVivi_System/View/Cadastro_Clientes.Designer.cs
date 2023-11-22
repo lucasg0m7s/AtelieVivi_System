@@ -259,7 +259,8 @@
             this.txtInsta.Name = "txtInsta";
             this.txtInsta.Size = new System.Drawing.Size(169, 19);
             this.txtInsta.TabIndex = 5;
-            this.txtInsta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInsta_KeyPress);
+            this.txtInsta.TextChanged += new System.EventHandler(this.txtInsta_TextChanged);
+            this.txtInsta.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtInsta_KeyDown);
             // 
             // txtNome
             // 
@@ -273,7 +274,8 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(172, 19);
             this.txtNome.TabIndex = 1;
-            this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
+            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
+            this.txtNome.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNome_KeyDown);
             // 
             // lblSobrenome
             // 
@@ -300,7 +302,8 @@
             this.txtSobrenome.Name = "txtSobrenome";
             this.txtSobrenome.Size = new System.Drawing.Size(172, 19);
             this.txtSobrenome.TabIndex = 2;
-            this.txtSobrenome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSobrenome_KeyPress);
+            this.txtSobrenome.TextChanged += new System.EventHandler(this.txtSobrenome_TextChanged);
+            this.txtSobrenome.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSobrenome_KeyDown);
             // 
             // label3
             // 
@@ -424,6 +427,8 @@
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(239, 19);
             this.txtNumero.TabIndex = 10;
+            this.txtNumero.TextChanged += new System.EventHandler(this.txtNumero_TextChanged);
+            this.txtNumero.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNumero_KeyDown);
             // 
             // label10
             // 
@@ -483,6 +488,8 @@
             this.txtRua.Name = "txtRua";
             this.txtRua.Size = new System.Drawing.Size(239, 19);
             this.txtRua.TabIndex = 8;
+            this.txtRua.TextChanged += new System.EventHandler(this.txtRua_TextChanged);
+            this.txtRua.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtRua_KeyDown);
             // 
             // label8
             // 
@@ -505,11 +512,12 @@
             this.txtBairro.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBairro.Font = new System.Drawing.Font("Century Gothic", 11.25F);
             this.txtBairro.Location = new System.Drawing.Point(23, 253);
-            this.txtBairro.MaxLength = 20;
+            this.txtBairro.MaxLength = 50;
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(239, 19);
             this.txtBairro.TabIndex = 9;
-            this.txtBairro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBairro_KeyPress);
+            this.txtBairro.TextChanged += new System.EventHandler(this.txtBairro_TextChanged);
+            this.txtBairro.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBairro_KeyDown);
             // 
             // label9
             // 
@@ -577,11 +585,12 @@
             this.txtLogradouro.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtLogradouro.Font = new System.Drawing.Font("Century Gothic", 11.25F);
             this.txtLogradouro.Location = new System.Drawing.Point(22, 79);
-            this.txtLogradouro.MaxLength = 20;
+            this.txtLogradouro.MaxLength = 30;
             this.txtLogradouro.Name = "txtLogradouro";
             this.txtLogradouro.Size = new System.Drawing.Size(239, 19);
             this.txtLogradouro.TabIndex = 6;
-            this.txtLogradouro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLogradouro_KeyPress);
+            this.txtLogradouro.TextChanged += new System.EventHandler(this.txtLogradouro_TextChanged);
+            this.txtLogradouro.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtLogradouro_KeyDown);
             // 
             // txtComplemento
             // 
@@ -595,7 +604,8 @@
             this.txtComplemento.Name = "txtComplemento";
             this.txtComplemento.Size = new System.Drawing.Size(239, 19);
             this.txtComplemento.TabIndex = 7;
-            this.txtComplemento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtComplemento_KeyPress);
+            this.txtComplemento.TextChanged += new System.EventHandler(this.txtComplemento_TextChanged);
+            this.txtComplemento.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtComplemento_KeyDown);
             // 
             // label6
             // 

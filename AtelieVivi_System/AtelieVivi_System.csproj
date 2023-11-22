@@ -76,6 +76,7 @@
     <Compile Include="Repositorios\Conexao.cs" />
     <Compile Include="Servicos\ClienteCadastroServico.cs" />
     <Compile Include="Servicos\LocacaoCadastroServico.cs" />
+    <Compile Include="Servicos\Validacao_Eventos.cs" />
     <Compile Include="View\Cadastro_Clientes.cs">
       <SubType>Form</SubType>
     </Compile>

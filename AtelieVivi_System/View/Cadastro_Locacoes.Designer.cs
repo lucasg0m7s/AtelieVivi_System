@@ -49,6 +49,8 @@
             this.txtComplemento = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.mskHora = new System.Windows.Forms.MaskedTextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.mskData = new System.Windows.Forms.MaskedTextBox();
@@ -67,8 +69,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.lblCpf = new System.Windows.Forms.Label();
             this.labelTopBar = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -145,6 +145,8 @@
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(239, 19);
             this.txtNumero.TabIndex = 10;
+            this.txtNumero.TextChanged += new System.EventHandler(this.txtNumero_TextChanged);
+            this.txtNumero.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNumero_KeyDown);
             // 
             // label10
             // 
@@ -204,6 +206,8 @@
             this.txtRua.Name = "txtRua";
             this.txtRua.Size = new System.Drawing.Size(239, 19);
             this.txtRua.TabIndex = 8;
+            this.txtRua.TextChanged += new System.EventHandler(this.txtRua_TextChanged);
+            this.txtRua.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtRua_KeyDown);
             // 
             // label8
             // 
@@ -226,10 +230,12 @@
             this.txtBairro.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBairro.Font = new System.Drawing.Font("Century Gothic", 11.25F);
             this.txtBairro.Location = new System.Drawing.Point(23, 253);
-            this.txtBairro.MaxLength = 20;
+            this.txtBairro.MaxLength = 50;
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(239, 19);
             this.txtBairro.TabIndex = 9;
+            this.txtBairro.TextChanged += new System.EventHandler(this.txtBairro_TextChanged);
+            this.txtBairro.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBairro_KeyDown);
             // 
             // label9
             // 
@@ -297,10 +303,12 @@
             this.txtLogradouro.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtLogradouro.Font = new System.Drawing.Font("Century Gothic", 11.25F);
             this.txtLogradouro.Location = new System.Drawing.Point(22, 79);
-            this.txtLogradouro.MaxLength = 20;
+            this.txtLogradouro.MaxLength = 30;
             this.txtLogradouro.Name = "txtLogradouro";
             this.txtLogradouro.Size = new System.Drawing.Size(239, 19);
             this.txtLogradouro.TabIndex = 6;
+            this.txtLogradouro.TextChanged += new System.EventHandler(this.txtLogradouro_TextChanged);
+            this.txtLogradouro.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtLogradouro_KeyDown);
             // 
             // txtComplemento
             // 
@@ -314,6 +322,8 @@
             this.txtComplemento.Name = "txtComplemento";
             this.txtComplemento.Size = new System.Drawing.Size(239, 19);
             this.txtComplemento.TabIndex = 7;
+            this.txtComplemento.TextChanged += new System.EventHandler(this.txtComplemento_TextChanged);
+            this.txtComplemento.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtComplemento_KeyDown);
             // 
             // label6
             // 
@@ -357,6 +367,26 @@
             this.panel1.Size = new System.Drawing.Size(329, 454);
             this.panel1.TabIndex = 12;
             // 
+            // panel5
+            // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel5.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel5.Location = new System.Drawing.Point(146, 346);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(68, 1);
+            this.panel5.TabIndex = 45;
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel4.Location = new System.Drawing.Point(17, 346);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(78, 1);
+            this.panel4.TabIndex = 44;
+            // 
             // mskHora
             // 
             this.mskHora.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -368,7 +398,7 @@
             this.mskHora.Mask = "00:00";
             this.mskHora.Name = "mskHora";
             this.mskHora.Size = new System.Drawing.Size(37, 19);
-            this.mskHora.TabIndex = 69;
+            this.mskHora.TabIndex = 6;
             this.mskHora.ValidatingType = typeof(System.DateTime);
             // 
             // label13
@@ -378,7 +408,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(149, 295);
+            this.label13.Location = new System.Drawing.Point(153, 295);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(58, 21);
             this.label13.TabIndex = 67;
@@ -395,9 +425,8 @@
             this.mskData.Mask = "00/00/0000";
             this.mskData.Name = "mskData";
             this.mskData.Size = new System.Drawing.Size(84, 19);
-            this.mskData.TabIndex = 66;
+            this.mskData.TabIndex = 5;
             this.mskData.ValidatingType = typeof(System.DateTime);
-            this.mskData.Validating += new System.ComponentModel.CancelEventHandler(this.mskData_Validating);
             // 
             // label12
             // 
@@ -424,6 +453,8 @@
             this.txtTema.Name = "txtTema";
             this.txtTema.Size = new System.Drawing.Size(183, 19);
             this.txtTema.TabIndex = 4;
+            this.txtTema.TextChanged += new System.EventHandler(this.txtTema_TextChanged);
+            this.txtTema.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTema_KeyDown);
             // 
             // comboCliente
             // 
@@ -519,6 +550,8 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(181, 19);
             this.txtNome.TabIndex = 1;
+            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
+            this.txtNome.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNome_KeyDown);
             // 
             // lblSobrenome
             // 
@@ -545,6 +578,8 @@
             this.txtSobrenome.Name = "txtSobrenome";
             this.txtSobrenome.Size = new System.Drawing.Size(181, 19);
             this.txtSobrenome.TabIndex = 2;
+            this.txtSobrenome.TextChanged += new System.EventHandler(this.txtSobrenome_TextChanged);
+            this.txtSobrenome.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSobrenome_KeyDown);
             // 
             // label5
             // 
@@ -582,26 +617,6 @@
             this.labelTopBar.Size = new System.Drawing.Size(95, 35);
             this.labelTopBar.TabIndex = 10;
             this.labelTopBar.Text = "Dados";
-            // 
-            // panel4
-            // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel4.Location = new System.Drawing.Point(17, 346);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(78, 1);
-            this.panel4.TabIndex = 44;
-            // 
-            // panel5
-            // 
-            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel5.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel5.Location = new System.Drawing.Point(146, 346);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(68, 1);
-            this.panel5.TabIndex = 45;
             // 
             // Cadastro_Locacoes
             // 
