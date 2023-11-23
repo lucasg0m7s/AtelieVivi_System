@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnAtualizar = new System.Windows.Forms.Button();
+            this.panelCliente = new System.Windows.Forms.Panel();
+            this.labelTopBar = new System.Windows.Forms.Label();
+            this.comboClientes = new System.Windows.Forms.ComboBox();
             this.mskRG = new System.Windows.Forms.MaskedTextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,7 +49,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lblCpf = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnAtualizar = new System.Windows.Forms.Button();
+            this.panelEndereco = new System.Windows.Forms.Panel();
             this.comboCidade = new System.Windows.Forms.ComboBox();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
@@ -67,57 +69,61 @@
             this.txtLogradouro = new System.Windows.Forms.TextBox();
             this.txtComplemento = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.labelTopBar = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panelCliente.SuspendLayout();
+            this.panelEndereco.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelCliente
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelCliente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.labelTopBar);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.mskRG);
-            this.panel1.Controls.Add(this.panel6);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.mskCelular);
-            this.panel1.Controls.Add(this.mskCPF);
-            this.panel1.Controls.Add(this.panel7);
-            this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel8);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.txtInsta);
-            this.panel1.Controls.Add(this.txtNome);
-            this.panel1.Controls.Add(this.lblSobrenome);
-            this.panel1.Controls.Add(this.txtSobrenome);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.lblCpf);
-            this.panel1.Location = new System.Drawing.Point(2, 1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(320, 454);
-            this.panel1.TabIndex = 11;
+            this.panelCliente.Controls.Add(this.comboClientes);
+            this.panelCliente.Controls.Add(this.mskRG);
+            this.panelCliente.Controls.Add(this.labelTopBar);
+            this.panelCliente.Controls.Add(this.panel6);
+            this.panelCliente.Controls.Add(this.label4);
+            this.panelCliente.Controls.Add(this.mskCelular);
+            this.panelCliente.Controls.Add(this.mskCPF);
+            this.panelCliente.Controls.Add(this.panel7);
+            this.panelCliente.Controls.Add(this.panel5);
+            this.panelCliente.Controls.Add(this.panel4);
+            this.panelCliente.Controls.Add(this.panel3);
+            this.panelCliente.Controls.Add(this.panel8);
+            this.panelCliente.Controls.Add(this.label2);
+            this.panelCliente.Controls.Add(this.txtInsta);
+            this.panelCliente.Controls.Add(this.txtNome);
+            this.panelCliente.Controls.Add(this.lblSobrenome);
+            this.panelCliente.Controls.Add(this.txtSobrenome);
+            this.panelCliente.Controls.Add(this.label3);
+            this.panelCliente.Controls.Add(this.label5);
+            this.panelCliente.Controls.Add(this.lblCpf);
+            this.panelCliente.Location = new System.Drawing.Point(2, 1);
+            this.panelCliente.Name = "panelCliente";
+            this.panelCliente.Size = new System.Drawing.Size(320, 454);
+            this.panelCliente.TabIndex = 11;
             // 
-            // btnAtualizar
+            // labelTopBar
             // 
-            this.btnAtualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAtualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(213)))), ((int)(((byte)(66)))));
-            this.btnAtualizar.Enabled = false;
-            this.btnAtualizar.FlatAppearance.BorderSize = 0;
-            this.btnAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAtualizar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.btnAtualizar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAtualizar.Location = new System.Drawing.Point(20, 401);
-            this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnAtualizar.Size = new System.Drawing.Size(115, 32);
-            this.btnAtualizar.TabIndex = 12;
-            this.btnAtualizar.Text = "Atualizar";
-            this.btnAtualizar.UseVisualStyleBackColor = false;
+            this.labelTopBar.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labelTopBar.AutoSize = true;
+            this.labelTopBar.Font = new System.Drawing.Font("Yu Gothic", 20F);
+            this.labelTopBar.Location = new System.Drawing.Point(10, 18);
+            this.labelTopBar.Name = "labelTopBar";
+            this.labelTopBar.Size = new System.Drawing.Size(279, 35);
+            this.labelTopBar.TabIndex = 63;
+            this.labelTopBar.Text = "Selecione um Cliente";
+            // 
+            // comboClientes
+            // 
+            this.comboClientes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboClientes.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.comboClientes.FormattingEnabled = true;
+            this.comboClientes.Location = new System.Drawing.Point(16, 56);
+            this.comboClientes.Name = "comboClientes";
+            this.comboClientes.Size = new System.Drawing.Size(262, 28);
+            this.comboClientes.TabIndex = 1;
+            this.comboClientes.SelectedIndexChanged += new System.EventHandler(this.comboClientes_SelectedIndexChanged);
             // 
             // mskRG
             // 
@@ -131,14 +137,14 @@
             this.mskRG.Mask = "00,000,000-0";
             this.mskRG.Name = "mskRG";
             this.mskRG.Size = new System.Drawing.Size(172, 19);
-            this.mskRG.TabIndex = 5;
+            this.mskRG.TabIndex = 6;
             this.mskRG.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // panel6
             // 
             this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel6.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel6.BackColor = System.Drawing.Color.Red;
             this.panel6.Location = new System.Drawing.Point(19, 362);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(172, 1);
@@ -169,7 +175,7 @@
             this.mskCelular.Mask = "(99)00000-0000";
             this.mskCelular.Name = "mskCelular";
             this.mskCelular.Size = new System.Drawing.Size(172, 19);
-            this.mskCelular.TabIndex = 4;
+            this.mskCelular.TabIndex = 5;
             this.mskCelular.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // mskCPF
@@ -184,14 +190,14 @@
             this.mskCPF.Mask = "000,000,000-00";
             this.mskCPF.Name = "mskCPF";
             this.mskCPF.Size = new System.Drawing.Size(172, 19);
-            this.mskCPF.TabIndex = 3;
+            this.mskCPF.TabIndex = 4;
             this.mskCPF.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // panel7
             // 
             this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel7.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel7.BackColor = System.Drawing.Color.Red;
             this.panel7.Location = new System.Drawing.Point(18, 415);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(172, 1);
@@ -201,7 +207,7 @@
             // 
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel5.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel5.BackColor = System.Drawing.Color.Red;
             this.panel5.Location = new System.Drawing.Point(18, 307);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(172, 1);
@@ -211,7 +217,7 @@
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel4.BackColor = System.Drawing.Color.Red;
             this.panel4.Location = new System.Drawing.Point(18, 252);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(172, 1);
@@ -221,7 +227,7 @@
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel3.BackColor = System.Drawing.Color.Red;
             this.panel3.Location = new System.Drawing.Point(18, 199);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(172, 1);
@@ -231,7 +237,7 @@
             // 
             this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel8.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel8.BackColor = System.Drawing.Color.Red;
             this.panel8.Location = new System.Drawing.Point(18, 144);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(172, 1);
@@ -262,7 +268,9 @@
             this.txtInsta.MaxLength = 20;
             this.txtInsta.Name = "txtInsta";
             this.txtInsta.Size = new System.Drawing.Size(169, 19);
-            this.txtInsta.TabIndex = 5;
+            this.txtInsta.TabIndex = 7;
+            this.txtInsta.TextChanged += new System.EventHandler(this.txtInsta_TextChanged);
+            this.txtInsta.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtInsta_KeyDown);
             // 
             // txtNome
             // 
@@ -276,7 +284,9 @@
             this.txtNome.MaxLength = 20;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(172, 19);
-            this.txtNome.TabIndex = 1;
+            this.txtNome.TabIndex = 2;
+            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
+            this.txtNome.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNome_KeyDown);
             // 
             // lblSobrenome
             // 
@@ -303,7 +313,9 @@
             this.txtSobrenome.MaxLength = 20;
             this.txtSobrenome.Name = "txtSobrenome";
             this.txtSobrenome.Size = new System.Drawing.Size(172, 19);
-            this.txtSobrenome.TabIndex = 2;
+            this.txtSobrenome.TabIndex = 3;
+            this.txtSobrenome.TextChanged += new System.EventHandler(this.txtSobrenome_TextChanged);
+            this.txtSobrenome.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSobrenome_KeyDown);
             // 
             // label3
             // 
@@ -344,33 +356,52 @@
             this.lblCpf.TabIndex = 25;
             this.lblCpf.Text = "CPF";
             // 
-            // panel2
+            // btnAtualizar
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnAtualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAtualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(213)))), ((int)(((byte)(66)))));
+            this.btnAtualizar.Enabled = false;
+            this.btnAtualizar.FlatAppearance.BorderSize = 0;
+            this.btnAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtualizar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAtualizar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnAtualizar.Location = new System.Drawing.Point(20, 401);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnAtualizar.Size = new System.Drawing.Size(115, 32);
+            this.btnAtualizar.TabIndex = 14;
+            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.UseVisualStyleBackColor = false;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
+            // 
+            // panelEndereco
+            // 
+            this.panelEndereco.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.comboCidade);
-            this.panel2.Controls.Add(this.panel13);
-            this.panel2.Controls.Add(this.btnAtualizar);
-            this.panel2.Controls.Add(this.panel14);
-            this.panel2.Controls.Add(this.txtNumero);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.panel11);
-            this.panel2.Controls.Add(this.panel12);
-            this.panel2.Controls.Add(this.txtRua);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.txtBairro);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.panel9);
-            this.panel2.Controls.Add(this.panel10);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.txtLogradouro);
-            this.panel2.Controls.Add(this.txtComplemento);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Location = new System.Drawing.Point(370, 1);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(359, 454);
-            this.panel2.TabIndex = 44;
+            this.panelEndereco.Controls.Add(this.panel15);
+            this.panelEndereco.Controls.Add(this.comboCidade);
+            this.panelEndereco.Controls.Add(this.panel13);
+            this.panelEndereco.Controls.Add(this.btnAtualizar);
+            this.panelEndereco.Controls.Add(this.panel14);
+            this.panelEndereco.Controls.Add(this.txtNumero);
+            this.panelEndereco.Controls.Add(this.label10);
+            this.panelEndereco.Controls.Add(this.label11);
+            this.panelEndereco.Controls.Add(this.panel11);
+            this.panelEndereco.Controls.Add(this.panel12);
+            this.panelEndereco.Controls.Add(this.txtRua);
+            this.panelEndereco.Controls.Add(this.label8);
+            this.panelEndereco.Controls.Add(this.txtBairro);
+            this.panelEndereco.Controls.Add(this.label9);
+            this.panelEndereco.Controls.Add(this.panel9);
+            this.panelEndereco.Controls.Add(this.panel10);
+            this.panelEndereco.Controls.Add(this.label7);
+            this.panelEndereco.Controls.Add(this.txtLogradouro);
+            this.panelEndereco.Controls.Add(this.txtComplemento);
+            this.panelEndereco.Controls.Add(this.label6);
+            this.panelEndereco.Location = new System.Drawing.Point(370, 1);
+            this.panelEndereco.Name = "panelEndereco";
+            this.panelEndereco.Size = new System.Drawing.Size(359, 454);
+            this.panelEndereco.TabIndex = 44;
             // 
             // comboCidade
             // 
@@ -383,7 +414,7 @@
             this.comboCidade.Location = new System.Drawing.Point(20, 347);
             this.comboCidade.Name = "comboCidade";
             this.comboCidade.Size = new System.Drawing.Size(242, 28);
-            this.comboCidade.TabIndex = 11;
+            this.comboCidade.TabIndex = 13;
             // 
             // panel13
             // 
@@ -399,7 +430,7 @@
             // 
             this.panel14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel14.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel14.BackColor = System.Drawing.Color.Red;
             this.panel14.Location = new System.Drawing.Point(23, 307);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(239, 1);
@@ -417,7 +448,9 @@
             this.txtNumero.MaxLength = 5;
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(239, 19);
-            this.txtNumero.TabIndex = 10;
+            this.txtNumero.TabIndex = 12;
+            this.txtNumero.TextChanged += new System.EventHandler(this.txtNumero_TextChanged);
+            this.txtNumero.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNumero_KeyDown);
             // 
             // label10
             // 
@@ -449,7 +482,7 @@
             // 
             this.panel11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel11.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel11.BackColor = System.Drawing.Color.Red;
             this.panel11.Location = new System.Drawing.Point(22, 241);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(239, 1);
@@ -459,7 +492,7 @@
             // 
             this.panel12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel12.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel12.BackColor = System.Drawing.Color.Red;
             this.panel12.Location = new System.Drawing.Point(22, 186);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(239, 1);
@@ -477,7 +510,9 @@
             this.txtRua.MaxLength = 50;
             this.txtRua.Name = "txtRua";
             this.txtRua.Size = new System.Drawing.Size(239, 19);
-            this.txtRua.TabIndex = 8;
+            this.txtRua.TabIndex = 10;
+            this.txtRua.TextChanged += new System.EventHandler(this.txtRua_TextChanged);
+            this.txtRua.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtRua_KeyDown);
             // 
             // label8
             // 
@@ -504,7 +539,9 @@
             this.txtBairro.MaxLength = 50;
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(239, 19);
-            this.txtBairro.TabIndex = 9;
+            this.txtBairro.TabIndex = 11;
+            this.txtBairro.TextChanged += new System.EventHandler(this.txtBairro_TextChanged);
+            this.txtBairro.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBairro_KeyDown);
             // 
             // label9
             // 
@@ -523,7 +560,7 @@
             // 
             this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel9.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel9.BackColor = System.Drawing.Color.Red;
             this.panel9.Location = new System.Drawing.Point(21, 122);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(239, 1);
@@ -533,7 +570,7 @@
             // 
             this.panel10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel10.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel10.BackColor = System.Drawing.Color.Red;
             this.panel10.Location = new System.Drawing.Point(21, 67);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(239, 1);
@@ -564,7 +601,9 @@
             this.txtLogradouro.MaxLength = 30;
             this.txtLogradouro.Name = "txtLogradouro";
             this.txtLogradouro.Size = new System.Drawing.Size(239, 19);
-            this.txtLogradouro.TabIndex = 6;
+            this.txtLogradouro.TabIndex = 8;
+            this.txtLogradouro.TextChanged += new System.EventHandler(this.txtLogradouro_TextChanged);
+            this.txtLogradouro.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtLogradouro_KeyDown);
             // 
             // txtComplemento
             // 
@@ -578,7 +617,9 @@
             this.txtComplemento.MaxLength = 20;
             this.txtComplemento.Name = "txtComplemento";
             this.txtComplemento.Size = new System.Drawing.Size(239, 19);
-            this.txtComplemento.TabIndex = 7;
+            this.txtComplemento.TabIndex = 9;
+            this.txtComplemento.TextChanged += new System.EventHandler(this.txtComplemento_TextChanged);
+            this.txtComplemento.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtComplemento_KeyDown);
             // 
             // label6
             // 
@@ -593,47 +634,36 @@
             this.label6.TabIndex = 47;
             this.label6.Text = "COMPLEMENTO";
             // 
-            // comboBox1
+            // panel15
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(17, 47);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(242, 28);
-            this.comboBox1.TabIndex = 62;
-            // 
-            // labelTopBar
-            // 
-            this.labelTopBar.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelTopBar.AutoSize = true;
-            this.labelTopBar.Font = new System.Drawing.Font("Yu Gothic", 20F);
-            this.labelTopBar.Location = new System.Drawing.Point(10, 8);
-            this.labelTopBar.Name = "labelTopBar";
-            this.labelTopBar.Size = new System.Drawing.Size(279, 35);
-            this.labelTopBar.TabIndex = 63;
-            this.labelTopBar.Text = "Selecione um Cliente";
+            this.panel15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel15.BackColor = System.Drawing.Color.Red;
+            this.panel15.Location = new System.Drawing.Point(23, 384);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(239, 1);
+            this.panel15.TabIndex = 61;
             // 
             // Atualizacao_Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(732, 461);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelEndereco);
+            this.Controls.Add(this.panelCliente);
             this.Name = "Atualizacao_Clientes";
             this.Text = "Atualização de Clientes";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panelCliente.ResumeLayout(false);
+            this.panelCliente.PerformLayout();
+            this.panelEndereco.ResumeLayout(false);
+            this.panelEndereco.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelCliente;
         private System.Windows.Forms.Button btnAtualizar;
         private System.Windows.Forms.MaskedTextBox mskRG;
         private System.Windows.Forms.Panel panel6;
@@ -653,7 +683,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblCpf;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelEndereco;
         private System.Windows.Forms.ComboBox comboCidade;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel14;
@@ -672,7 +702,8 @@
         private System.Windows.Forms.TextBox txtLogradouro;
         private System.Windows.Forms.TextBox txtComplemento;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboClientes;
         private System.Windows.Forms.Label labelTopBar;
+        private System.Windows.Forms.Panel panel15;
     }
 }
