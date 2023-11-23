@@ -490,7 +490,6 @@
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelTopBar);
             this.Controls.Add(this.panelSideMenu);
-            this.MinimumSize = new System.Drawing.Size(1014, 639);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

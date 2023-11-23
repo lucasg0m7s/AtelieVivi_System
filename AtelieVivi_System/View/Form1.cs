@@ -236,8 +236,6 @@ namespace AtelieVivi_System
             else
             {
                 this.WindowState = FormWindowState.Normal;
-                this.Width =  1014; 
-                this.Height = 639;
             }
         }
 
