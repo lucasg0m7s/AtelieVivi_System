@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace AtelieVivi_System.Repositorios
 {
-    public class ClientesAtualizarRepositorio
+    public class ClienteAtualizarRepositorio
     {
         SqlCommand cmd = new SqlCommand();
         Conexao conn = new Conexao();
@@ -99,32 +99,57 @@ namespace AtelieVivi_System.Repositorios
             return message;
         }
 
-
         public void Atualizar(Clientes cliente, string CPF_Selecionado)
         {
             error = false;
-            cmd.CommandText = "UPDATE Clientes SET CPF = @Cpf, Nome = @Nome, Sobrenome = @Sobrenome, Complemento = @Complemento, Logradouro = @Logradouro, Rua = @Rua, Bairro = @Bairro, Numero = @Numero, RG = @RG, Celular = @Celular, User_Insta = @User_Insta, Id_Cidade = @Id_Cidade where CPF = @Cpf_Selecionado";
-            cmd.Parameters.AddWithValue("@Cpf_Selecionado", CPF_Selecionado);
-            cmd.Parameters.AddWithValue("@Cpf", cliente.CPF);
-            cmd.Parameters.AddWithValue("@Nome", cliente.Nome);
-            cmd.Parameters.AddWithValue("@Sobrenome", cliente.Sobrenome);
-            cmd.Parameters.AddWithValue("@Complemento", cliente.Complemento);
-            cmd.Parameters.AddWithValue("@Logradouro", cliente.Logradouro);
-            cmd.Parameters.AddWithValue("@Rua", cliente.Rua);
-            cmd.Parameters.AddWithValue("@Bairro", cliente.Bairro);
-            cmd.Parameters.AddWithValue("@Numero", cliente.Numero);
-            cmd.Parameters.AddWithValue("@RG", cliente.RG);
-            cmd.Parameters.AddWithValue("@Celular", cliente.Celular);
-            cmd.Parameters.AddWithValue("@User_Insta", cliente.User_Insta);
-            cmd.Parameters.AddWithValue("@Id_Cidade", cliente.Id_Cidade);
+            cmd.CommandText = "SELECT * FROM Clientes WHERE CPF = @Cpf_Verificado and Nome = @Nome_Verificado and Sobrenome = @Sobrenome_Verificado and Complemento = @Complemento_Verificado and Logradouro = @Logradouro_Verificado and Rua = @Rua_Verificado and Bairro = @Bairro_Verificado and Numero = @Numero_Verificado and RG = @RG_Verificado and Celular = @Celular_Verificado and User_Insta = @User_Insta_Verificado and Id_Cidade = @Id_Cidade_Verificado";
+            cmd.Parameters.AddWithValue("@Cpf_Verificado", cliente.CPF);
+            cmd.Parameters.AddWithValue("@Nome_Verificado", cliente.Nome);
+            cmd.Parameters.AddWithValue("@Sobrenome_Verificado", cliente.Sobrenome);
+            cmd.Parameters.AddWithValue("@Complemento_Verificado", cliente.Complemento);
+            cmd.Parameters.AddWithValue("@Logradouro_Verificado", cliente.Logradouro);
+            cmd.Parameters.AddWithValue("@Rua_Verificado", cliente.Rua);
+            cmd.Parameters.AddWithValue("@Bairro_Verificado", cliente.Bairro);
+            cmd.Parameters.AddWithValue("@Numero_Verificado", cliente.Numero);
+            cmd.Parameters.AddWithValue("@RG_Verificado", cliente.RG);
+            cmd.Parameters.AddWithValue("@Celular_Verificado", cliente.Celular);
+            cmd.Parameters.AddWithValue("@User_Insta_Verificado", cliente.User_Insta);
+            cmd.Parameters.AddWithValue("@Id_Cidade_Verificado", cliente.Id_Cidade);
+
             try
             {
                 cmd.Connection = conn.Conectar();
 
-                cmd.ExecuteNonQuery();
+                reader = cmd.ExecuteReader();
 
-                message = "Os dados foram atualizados com sucesso!";
+                if (reader.HasRows)
+                {
+                    message = "Não houve nenhuma alteração nos campos, os dados continuam iguais.";
+                    error = true;
+                    reader.Close();
+                }
+                else 
+                {
+                    reader.Close();
+                    cmd.CommandText = "UPDATE Clientes SET CPF = @Cpf, Nome = @Nome, Sobrenome = @Sobrenome, Complemento = @Complemento, Logradouro = @Logradouro, Rua = @Rua, Bairro = @Bairro, Numero = @Numero, RG = @RG, Celular = @Celular, User_Insta = @User_Insta, Id_Cidade = @Id_Cidade where CPF = @Cpf_Selecionado";
+                    cmd.Parameters.AddWithValue("@Cpf_Selecionado", CPF_Selecionado);
+                    cmd.Parameters.AddWithValue("@Cpf", cliente.CPF);
+                    cmd.Parameters.AddWithValue("@Nome", cliente.Nome);
+                    cmd.Parameters.AddWithValue("@Sobrenome", cliente.Sobrenome);
+                    cmd.Parameters.AddWithValue("@Complemento", cliente.Complemento);
+                    cmd.Parameters.AddWithValue("@Logradouro", cliente.Logradouro);
+                    cmd.Parameters.AddWithValue("@Rua", cliente.Rua);
+                    cmd.Parameters.AddWithValue("@Bairro", cliente.Bairro);
+                    cmd.Parameters.AddWithValue("@Numero", cliente.Numero);
+                    cmd.Parameters.AddWithValue("@RG", cliente.RG);
+                    cmd.Parameters.AddWithValue("@Celular", cliente.Celular);
+                    cmd.Parameters.AddWithValue("@User_Insta", cliente.User_Insta);
+                    cmd.Parameters.AddWithValue("@Id_Cidade", cliente.Id_Cidade);
 
+                    cmd.ExecuteNonQuery();
+
+                    message = "Os dados foram atualizados com sucesso!";
+                }
                 conn.Desconectar();
             }
             catch (Exception ex)

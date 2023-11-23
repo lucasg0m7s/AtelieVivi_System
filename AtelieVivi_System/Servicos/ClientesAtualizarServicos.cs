@@ -104,7 +104,7 @@ namespace AtelieVivi_System.Servicos
         }
         private static void PreencherCampos(string CPF_Cliente, ref MaskedTextBox CPF, ref MaskedTextBox RG, ref MaskedTextBox Celular, ref TextBox Nome, ref TextBox Sobrenome, ref TextBox Complemento, ref TextBox Logradouro, ref TextBox Rua, ref TextBox Bairro, ref TextBox Numero, ref TextBox User_Insta, ref ComboBox Cidade)
         {
-            ClientesAtualizarRepositorio clientesRepositorio = new ClientesAtualizarRepositorio();
+            ClienteAtualizarRepositorio clientesRepositorio = new ClienteAtualizarRepositorio();
             if (clientesRepositorio.AtribuirCampos(CPF_Cliente, ref CPF, ref RG, ref Celular, ref Nome, ref Sobrenome, ref Complemento, ref Logradouro, ref Rua, ref Bairro, ref Numero, ref User_Insta, ref Cidade) != "")
             {
                 MessageBox.Show(clientesRepositorio.message, "Ocorreu um problema", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -153,7 +153,7 @@ namespace AtelieVivi_System.Servicos
 
         private static bool Atualizar(Clientes cliente)
         {
-            ClientesAtualizarRepositorio clienteRepositorio = new ClientesAtualizarRepositorio();
+            ClienteAtualizarRepositorio clienteRepositorio = new ClienteAtualizarRepositorio();
             clienteRepositorio.Atualizar(cliente, ObterComboCliente(comboBoxes[0].Text));
             if (clienteRepositorio.error)
             {

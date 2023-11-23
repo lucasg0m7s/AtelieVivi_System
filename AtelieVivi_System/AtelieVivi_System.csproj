@@ -71,7 +71,7 @@
   <ItemGroup>
     <Compile Include="Model\Clientes.cs" />
     <Compile Include="Model\Locacoes.cs" />
-    <Compile Include="Repositorios\ClientesAtualizarRepositorio.cs" />
+    <Compile Include="Repositorios\ClienteAtualizarRepositorio.cs" />
     <Compile Include="Repositorios\LocacaoCadastroRepositorio.cs" />
     <Compile Include="Repositorios\ClienteCadastroRepositorio.cs" />
     <Compile Include="Repositorios\Conexao.cs" />
