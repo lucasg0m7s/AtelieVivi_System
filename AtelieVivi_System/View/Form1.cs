@@ -186,12 +186,12 @@ namespace AtelieVivi_System
         private void btnRemover_Click(object sender, EventArgs e)
         {
             showSubMenu(panelRemoverSubmenu);
-
         }
 
         private void btnRemoveClientes_Click(object sender, EventArgs e)
         {
             hideSubMenu();
+            openChildFormInPanel(new Remocao_Clientes());
         }
 
         private void btnRemoverLocacao_Click(object sender, EventArgs e)
