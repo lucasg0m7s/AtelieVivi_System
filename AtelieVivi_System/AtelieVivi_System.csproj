@@ -72,11 +72,13 @@
     <Compile Include="Model\Clientes.cs" />
     <Compile Include="Model\Locacoes.cs" />
     <Compile Include="Repositorios\ClienteAtualizarRepositorio.cs" />
+    <Compile Include="Repositorios\LocacaoAtualizarRepositorio.cs" />
     <Compile Include="Repositorios\LocacaoCadastroRepositorio.cs" />
     <Compile Include="Repositorios\ClienteCadastroRepositorio.cs" />
     <Compile Include="Repositorios\Conexao.cs" />
     <Compile Include="Servicos\ClienteCadastroServico.cs" />
-    <Compile Include="Servicos\ClientesAtualizarServicos.cs" />
+    <Compile Include="Servicos\ClienteAtualizarServico.cs" />
+    <Compile Include="Servicos\LocacaoAtualizarServico.cs" />
     <Compile Include="Servicos\LocacaoCadastroServico.cs" />
     <Compile Include="Servicos\Validacao_Eventos.cs" />
     <Compile Include="View\Atualizacao_Clientes.cs">
@@ -84,6 +86,12 @@
     </Compile>
     <Compile Include="View\Atualizacao_Clientes.Designer.cs">
       <DependentUpon>Atualizacao_Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Atualizacao_Locacoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Atualizacao_Locacoes.Designer.cs">
+      <DependentUpon>Atualizacao_Locacoes.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Cadastro_Clientes.cs">
       <SubType>Form</SubType>
@@ -113,6 +121,9 @@
     </Compile>
     <EmbeddedResource Include="View\Atualizacao_Clientes.resx">
       <DependentUpon>Atualizacao_Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Atualizacao_Locacoes.resx">
+      <DependentUpon>Atualizacao_Locacoes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Cadastro_Clientes.resx">
       <DependentUpon>Cadastro_Clientes.cs</DependentUpon>

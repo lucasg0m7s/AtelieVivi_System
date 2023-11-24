@@ -17,13 +17,13 @@ namespace AtelieVivi_System.View
         public Atualizacao_Clientes()
         {
             InitializeComponent();
-            ClientesAtualizarServicos.AtribuirComboCidade(ref comboCidade);
-            ClientesAtualizarServicos.AtribuirComboCliente(ref comboClientes);
+            ClienteAtualizarServicos.AtribuirComboCidade(ref comboCidade);
+            ClienteAtualizarServicos.AtribuirComboCliente(ref comboClientes);
         }
         private void comboClientes_SelectedIndexChanged(object sender, EventArgs e)
         {    
             Panel[] panels = {panel3, panel4, panel5, panel6, panel7, panel8, panel9, panel10, panel11, panel12, panel13, panel14, panel15};
-            ClientesAtualizarServicos.Ativar_Atribuir(panels, comboClientes ,mskCPF, mskRG, mskCelular, txtNome, txtSobrenome, txtComplemento, txtLogradouro, txtRua, txtBairro, txtNumero, txtInsta, comboCidade, btnAtualizar);
+            ClienteAtualizarServicos.Ativar_Atribuir(panels, comboClientes ,mskCPF, mskRG, mskCelular, txtNome, txtSobrenome, txtComplemento, txtLogradouro, txtRua, txtBairro, txtNumero, txtInsta, comboCidade, btnAtualizar);
         }
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
@@ -40,9 +40,9 @@ namespace AtelieVivi_System.View
                 RG = mskRG.Text,
                 Celular = mskCelular.Text,
                 User_Insta = txtInsta.Text,
-                Id_Cidade = ClientesAtualizarServicos.ObterComboCidade(comboCidade.Text)
+                Id_Cidade = ClienteAtualizarServicos.ObterComboCidade(comboCidade.Text)
             };
-            ClientesAtualizarServicos.ValidarCampos_e_Atualizar(cliente);
+            ClienteAtualizarServicos.ValidarCampos_e_Atualizar(cliente);
         }
         private void txtNome_KeyDown(object sender, KeyEventArgs e)
         {

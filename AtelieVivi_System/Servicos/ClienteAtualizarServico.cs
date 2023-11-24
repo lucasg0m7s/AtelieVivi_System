@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace AtelieVivi_System.Servicos
 {
-    public class ClientesAtualizarServicos
+    public class ClienteAtualizarServicos
     {
         private static Panel[] Panels { get; set; }
         private static TextBox[] textBoxes { get; set; }
@@ -45,10 +45,10 @@ namespace AtelieVivi_System.Servicos
         }
         public static void AtribuirComboCliente(ref ComboBox Cliente)
         {
-            LocacaoCadastroRepositorio locacoesRepositorio = new LocacaoCadastroRepositorio();
-            if (locacoesRepositorio.AtribuirComboCliente(ref Cliente) != "")
+            ClienteAtualizarRepositorio clienteRepositorio = new ClienteAtualizarRepositorio();
+            if (clienteRepositorio.AtribuirComboCliente(ref Cliente) != "")
             {
-                MessageBox.Show(locacoesRepositorio.message, "Ocorreu um problema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(clienteRepositorio.message, "Ocorreu um problema", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         public static string ObterComboCliente(string Cliente)

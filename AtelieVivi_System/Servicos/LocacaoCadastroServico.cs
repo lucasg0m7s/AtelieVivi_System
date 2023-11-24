@@ -80,7 +80,7 @@ namespace AtelieVivi_System.Servicos
             locacao.Data_Locacao = dataConvertida.ToString("yyyy-MM-dd");
         }
 
-        public static void ValidarCampos_e_Cadastrar(Locacoes locacao, MaskedTextBox Data, MaskedTextBox Hora, TextBox Nome_Aniversariante, TextBox Sobrenome_Aniversariante, TextBox Tema, TextBox Complemento, TextBox Logradouro, TextBox Rua, TextBox Bairro, TextBox Numero)
+        public static void ValidarCampos_e_Cadastrar(Locacoes locacao, MaskedTextBox Data, MaskedTextBox Hora, TextBox Nome_Aniversariante, TextBox Sobrenome_Aniversariante, TextBox Tema, TextBox Complemento, TextBox Logradouro, TextBox Rua, TextBox Bairro, TextBox Numero, ComboBox Cidade, ComboBox Cliente)
         {
             
             if (Data.MaskCompleted && Hora.MaskCompleted && locacao.Id_Cidade != 0 && locacao.CPF_Cliente != "0")
@@ -90,7 +90,6 @@ namespace AtelieVivi_System.Servicos
                     if (ValidarHora(Hora))
                     {
                         TratarCampos(locacao);
-                        MessageBox.Show(locacao.Horario_Locacao);
                         Type tipoDoObjeto = locacao.GetType();
                         PropertyInfo[] propriedades = tipoDoObjeto.GetProperties();
 
@@ -121,7 +120,7 @@ namespace AtelieVivi_System.Servicos
             }
             if (Cadastrar(locacao))
             {
-                LimparCampos(Data, Hora, Nome_Aniversariante, Sobrenome_Aniversariante, Complemento, Logradouro, Rua, Bairro, Numero, Tema);
+                LimparCampos(Data, Hora, Nome_Aniversariante, Sobrenome_Aniversariante, Complemento, Logradouro, Rua, Bairro, Numero, Tema, Cidade, Cliente);
             }
         }
         private static bool Cadastrar(Locacoes locacao)
@@ -139,7 +138,7 @@ namespace AtelieVivi_System.Servicos
                 return true;
             }
         }
-        public static void LimparCampos(MaskedTextBox Data, MaskedTextBox Hora, TextBox Nome, TextBox Sobrenome, TextBox Complemento, TextBox Logradouro, TextBox Rua, TextBox Bairro, TextBox Numero, TextBox Tema)
+        public static void LimparCampos(MaskedTextBox Data, MaskedTextBox Hora, TextBox Nome, TextBox Sobrenome, TextBox Complemento, TextBox Logradouro, TextBox Rua, TextBox Bairro, TextBox Numero, TextBox Tema, ComboBox Cidade, ComboBox Cliente)
         {
             Data.Text = "";
             Hora.Text = "";
@@ -151,6 +150,8 @@ namespace AtelieVivi_System.Servicos
             Rua.Text = "";
             Bairro.Text = "";
             Numero.Text = "";
+            Cidade.SelectedIndex = -1;
+            Cliente.SelectedIndex = -1;
         }
         private static bool ValidarData(MaskedTextBox mskData)
         {

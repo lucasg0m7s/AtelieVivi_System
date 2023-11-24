@@ -52,7 +52,7 @@ namespace AtelieVivi_System.Servicos
             cliente.User_Insta = cliente.User_Insta.Trim().ToLower();
         }
 
-        public static void ValidarCampos_e_Cadastrar(Clientes cliente, MaskedTextBox CPF, MaskedTextBox RG, MaskedTextBox Celular, TextBox Nome, TextBox Sobrenome, TextBox Complemento, TextBox Logradouro, TextBox Rua, TextBox Bairro, TextBox Numero, TextBox User_Insta)
+        public static void ValidarCampos_e_Cadastrar(Clientes cliente, MaskedTextBox CPF, MaskedTextBox RG, MaskedTextBox Celular, TextBox Nome, TextBox Sobrenome, TextBox Complemento, TextBox Logradouro, TextBox Rua, TextBox Bairro, TextBox Numero, TextBox User_Insta, ComboBox Cidade)
         {
             TratarCampos(cliente);
             if (CPF.MaskCompleted && RG.MaskCompleted && Celular.MaskCompleted && cliente.Id_Cidade != 0)
@@ -77,7 +77,7 @@ namespace AtelieVivi_System.Servicos
             }
             if (Cadastrar(cliente))
             {
-                LimparCampos(CPF, Nome, Sobrenome, Complemento, Logradouro, Rua, Bairro, Numero, RG, Celular, User_Insta);
+                LimparCampos(CPF, Nome, Sobrenome, Complemento, Logradouro, Rua, Bairro, Numero, RG, Celular, User_Insta, Cidade);
             }
         }
 
@@ -97,7 +97,7 @@ namespace AtelieVivi_System.Servicos
             }
         }
 
-        public static void LimparCampos(MaskedTextBox CPF, TextBox Nome, TextBox Sobrenome, TextBox Complemento, TextBox Logradouro, TextBox Rua, TextBox Bairro, TextBox Numero, MaskedTextBox RG, MaskedTextBox Celular, TextBox User_Insta)
+        public static void LimparCampos(MaskedTextBox CPF, TextBox Nome, TextBox Sobrenome, TextBox Complemento, TextBox Logradouro, TextBox Rua, TextBox Bairro, TextBox Numero, MaskedTextBox RG, MaskedTextBox Celular, TextBox User_Insta, ComboBox Cidade)
         {
             CPF.Text = "";
             Nome.Text = "";
@@ -110,6 +110,7 @@ namespace AtelieVivi_System.Servicos
             RG.Text = "";
             Celular.Text = "";
             User_Insta.Text = "";
+            Cidade.SelectedIndex = -1;
         } 
     }
 }

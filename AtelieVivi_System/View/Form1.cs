@@ -178,6 +178,7 @@ namespace AtelieVivi_System
         private void btnAtualizarLocacoes_Click(object sender, EventArgs e)
         {
             hideSubMenu();
+            openChildFormInPanel(new Atualizacao_Locacoes());
         }
         #endregion
 

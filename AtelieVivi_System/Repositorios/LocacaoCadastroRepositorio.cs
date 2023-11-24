@@ -41,7 +41,7 @@ namespace AtelieVivi_System.Repositorios
             }
             return message;
         }
-        public string AtribuirComboCliente(ref ComboBox locacao)
+        public string AtribuirComboCliente(ref ComboBox Cliente)
         {
             cmd.CommandText = "SELECT CPF, Nome, Sobrenome FROM Clientes";
             try
@@ -50,11 +50,11 @@ namespace AtelieVivi_System.Repositorios
 
                 reader = cmd.ExecuteReader();
 
-                locacao.Items.Clear();
+                Cliente.Items.Clear();
 
                 while (reader.Read())
                 {
-                    locacao.Items.Add($"{Convert.ToUInt64(reader["CPF"]).ToString(@"000\.000\.000\-00")} - {reader["Nome"]} {reader["Sobrenome"]}");
+                    Cliente.Items.Add($"{Convert.ToUInt64(reader["CPF"]).ToString(@"000\.000\.000\-00")} - {reader["Nome"]} {reader["Sobrenome"]}");
                 }
                 reader.Close();
                 conn.Desconectar();

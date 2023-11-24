@@ -40,7 +40,7 @@ namespace AtelieVivi_System.View
                 Id_Cidade = LocacaoCadastroServico.ObterComboCidade(comboCidade.Text),
                 CPF_Cliente = LocacaoCadastroServico.ObterComboCliente(comboCliente.Text),               
             };
-            LocacaoCadastroServico.ValidarCampos_e_Cadastrar(Locacoes, mskData, mskHora, txtNome, txtSobrenome, txtTema, txtComplemento, txtLogradouro, txtRua, txtBairro, txtNumero);
+            LocacaoCadastroServico.ValidarCampos_e_Cadastrar(Locacoes, mskData, mskHora, txtNome, txtSobrenome, txtTema, txtComplemento, txtLogradouro, txtRua, txtBairro, txtNumero, comboCidade, comboCliente);
         }
 
         private void txtNome_TextChanged(object sender, EventArgs e)
