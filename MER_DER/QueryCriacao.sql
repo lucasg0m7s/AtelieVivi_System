@@ -47,10 +47,11 @@ add constraint FK_Cidades_Locacoes
 Foreign Key (Id_Cidade)
 References Cidades (Id_Cidade);
 
-alter table locacoes
-add constraint FK_Clientes_Locacoes
-Foreign Key (CPF_Cliente)
-References Clientes (Cpf);
+ALTER TABLE LOCACOES
+ADD CONSTRAINT FK_CLIENTES_LOCACOES
+FOREIGN KEY (CPF_CLIENTE)
+REFERENCES CLIENTES (CPF)
+ON DELETE CASCADE;
 
 alter table clientes
 add constraint FK_Cidades_Clientes

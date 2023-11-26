@@ -17,6 +17,25 @@ namespace AtelieVivi_System.View
         {
             InitializeComponent();
             ClientesRemocaoServico.AtribuirComboCliente(ref comboClientes);
+
+        }
+
+        private void comboClientes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ClientesRemocaoServico clientesRemocao = new ClientesRemocaoServico(comboClientes.Text);
+            clientesRemocao.PreencherDataGridView(ref dgvClientes, btnRemover);
+        }
+
+        private void dgvClientes_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            ClientesRemocaoServico clientesRemocao = new ClientesRemocaoServico(comboClientes.Text);
+            clientesRemocao.TratarDataGridView(dgvClientes, e);
+        }
+
+        private void btnRemover_Click(object sender, EventArgs e)
+        {
+            ClientesRemocaoServico clientesRemocao = new ClientesRemocaoServico(comboClientes.Text);
+            clientesRemocao.RemoverCliente(btnRemover, dgvClientes, comboClientes);
         }
     }
 }
