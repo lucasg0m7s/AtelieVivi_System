@@ -142,7 +142,7 @@ namespace AtelieVivi_System
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-
+            openChildFormInPanel(new ExibirDados());
         }
 
         #region Cadastrar

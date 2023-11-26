@@ -38,3 +38,6 @@ C:\Users\lucas\Documents\GitHub_Projects\AtelieVivi_System\AtelieVivi_System\obj
 C:\Users\lucas\Documents\GitHub_Projects\AtelieVivi_System\AtelieVivi_System\obj\Debug\AtelieVivi_System.View.Atualizacao_Locacoes.resources
 C:\Users\lucas\Documents\GitHub_Projects\AtelieVivi_System\AtelieVivi_System\obj\Debug\AtelieVivi_System.View.Remocao_Clientes.resources
 C:\Users\lucas\Documents\GitHub_Projects\AtelieVivi_System\AtelieVivi_System\obj\Debug\AtelieVivi_System.View.Remocao_Locacoes.resources
+C:\Users\lucas\Documents\GitHub_Projects\AtelieVivi_System\AtelieVivi_System\obj\Debug\AtelieVivi_System.View.ExibirDados.resources
+C:\Users\lucas\Documents\GitHub_Projects\AtelieVivi_System\AtelieVivi_System\bin\Debug\System.Data.SqlClient.dll
+C:\Users\lucas\Documents\GitHub_Projects\AtelieVivi_System\AtelieVivi_System\bin\Debug\System.Data.SqlClient.xml
