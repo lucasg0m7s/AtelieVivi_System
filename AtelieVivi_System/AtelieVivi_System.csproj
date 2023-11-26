@@ -77,11 +77,13 @@
     <Compile Include="Repositorios\LocacaoCadastroRepositorio.cs" />
     <Compile Include="Repositorios\ClienteCadastroRepositorio.cs" />
     <Compile Include="Repositorios\Conexao.cs" />
+    <Compile Include="Repositorios\LocacaoRemocaoRepositorio.cs" />
     <Compile Include="Servicos\ClienteCadastroServico.cs" />
     <Compile Include="Servicos\ClienteAtualizarServico.cs" />
-    <Compile Include="Servicos\ClientesRemocaoServico.cs" />
+    <Compile Include="Servicos\ClienteRemocaoServico.cs" />
     <Compile Include="Servicos\LocacaoAtualizarServico.cs" />
     <Compile Include="Servicos\LocacaoCadastroServico.cs" />
+    <Compile Include="Servicos\LocacaoRemoverServico.cs" />
     <Compile Include="Servicos\Validacao_Eventos.cs" />
     <Compile Include="View\Atualizacao_Clientes.cs">
       <SubType>Form</SubType>
@@ -127,6 +129,12 @@
     <Compile Include="View\Remocao_Clientes.Designer.cs">
       <DependentUpon>Remocao_Clientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Remocao_Locacoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Remocao_Locacoes.Designer.cs">
+      <DependentUpon>Remocao_Locacoes.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\Atualizacao_Clientes.resx">
       <DependentUpon>Atualizacao_Clientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -156,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Remocao_Clientes.resx">
       <DependentUpon>Remocao_Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Remocao_Locacoes.resx">
+      <DependentUpon>Remocao_Locacoes.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

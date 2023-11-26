@@ -197,6 +197,7 @@ namespace AtelieVivi_System
         private void btnRemoverLocacao_Click(object sender, EventArgs e)
         {
             hideSubMenu();
+            openChildFormInPanel(new Remocao_Locacoes());
         }
         #endregion
 

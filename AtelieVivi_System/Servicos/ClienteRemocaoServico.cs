@@ -9,11 +9,11 @@ using System.Windows.Forms;
 
 namespace AtelieVivi_System.Servicos
 {
-    public class ClientesRemocaoServico
+    public class ClienteRemocaoServico
     {
         private string CPF_Selecionado;
 
-        public ClientesRemocaoServico(string CPF_Selecionado)
+        public ClienteRemocaoServico(string CPF_Selecionado)
         {
             this.CPF_Selecionado = ObterComboCliente(CPF_Selecionado);
         }
@@ -91,8 +91,6 @@ namespace AtelieVivi_System.Servicos
             {
                 e.Value = ObterNomeCidade();
             }
-            dgvClientes.Columns["Rua"].Width = 150;
-            dgvClientes.Columns["Bairro"].Width = 150;
             dgvClientes.Columns["User_Insta"].HeaderText = "Usuário do Instagram";
             dgvClientes.Columns["Numero"].HeaderText = "Número";
             dgvClientes.Columns["Id_Cidade"].HeaderText = "Cidade";
@@ -113,7 +111,7 @@ namespace AtelieVivi_System.Servicos
         public void RemoverCliente(Button remover, DataGridView dgvClientes, ComboBox comboClientes)
         {
             ClienteRemocaoRepositorio clientesRepositorio = new ClienteRemocaoRepositorio();
-            DialogResult removerCliente = MessageBox.Show("Deseja mesmo excluir esse cliente? Ao fazer isso, todas as locações relacionadas a ele também serão excluídas.", "Ocorreu um problema", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult removerCliente = MessageBox.Show("Deseja mesmo excluir esse cliente? Ao fazer isso, todas as locações relacionadas a ele também serão excluídas.", "Tem certeza?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if(removerCliente == DialogResult.Yes)
             {
                 if (clientesRepositorio.RemoverCliente(CPF_Selecionado) != "")
