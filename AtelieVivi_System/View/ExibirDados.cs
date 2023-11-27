@@ -36,7 +36,7 @@ namespace AtelieVivi_System.View
         private void radioCliente_CheckedChanged(object sender, EventArgs e)
         {
             ExibirDadosServico exibirDadosServico = new ExibirDadosServico();
-            exibirDadosServico.AtivarCampos(panel10, btnPesquisar, txtPesquisar, lblPesquisar);
+            exibirDadosServico.AtivarCampos(panel10, txtPesquisar, lblPesquisar);
             exibirDadosServico.AtivarDGVClientes(dgvLocacoes, dgvClientes);
 
         }
@@ -44,8 +44,20 @@ namespace AtelieVivi_System.View
         private void radioLocacao_CheckedChanged(object sender, EventArgs e)
         {
             ExibirDadosServico exibirDadosServico = new ExibirDadosServico();
-            exibirDadosServico.AtivarCampos(panel10, btnPesquisar, txtPesquisar, lblPesquisar);
+            exibirDadosServico.AtivarCampos(panel10, txtPesquisar, lblPesquisar);
             exibirDadosServico.AtivarDGVLocacoes(dgvLocacoes, dgvClientes);
+        }
+
+        private void txtPesquisar_TextChanged(object sender, EventArgs e)
+        {
+            ExibirDadosServico exibirDadosServico = new ExibirDadosServico();
+            exibirDadosServico.Filtrar(radioCliente, radioLocacao, dgvClientes, dgvLocacoes, txtPesquisar);
+        }
+
+        private void txtPesquisar_Validating(object sender, CancelEventArgs e)
+        {
+            ExibirDadosServico exibirDadosServico = new ExibirDadosServico();
+            exibirDadosServico.LimparPesquisa(radioCliente, radioLocacao, dgvClientes, dgvLocacoes, txtPesquisar);
         }
     }
 }

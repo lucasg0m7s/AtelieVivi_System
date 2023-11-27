@@ -38,7 +38,6 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.lblPesquisar = new System.Windows.Forms.Label();
             this.txtPesquisar = new System.Windows.Forms.TextBox();
-            this.btnPesquisar = new FontAwesome.Sharp.IconButton();
             this.radioCliente = new System.Windows.Forms.RadioButton();
             this.radioLocacao = new System.Windows.Forms.RadioButton();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
@@ -99,29 +98,8 @@
             this.txtPesquisar.Size = new System.Drawing.Size(239, 19);
             this.txtPesquisar.TabIndex = 49;
             this.txtPesquisar.Visible = false;
-            // 
-            // btnPesquisar
-            // 
-            this.btnPesquisar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPesquisar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(213)))), ((int)(((byte)(66)))));
-            this.btnPesquisar.FlatAppearance.BorderSize = 0;
-            this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPesquisar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPesquisar.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.btnPesquisar.IconColor = System.Drawing.Color.Black;
-            this.btnPesquisar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnPesquisar.IconSize = 38;
-            this.btnPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPesquisar.Location = new System.Drawing.Point(402, 131);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnPesquisar.Size = new System.Drawing.Size(63, 43);
-            this.btnPesquisar.TabIndex = 52;
-            this.btnPesquisar.Tag = "Pesquisar";
-            this.btnPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPesquisar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPesquisar.UseVisualStyleBackColor = false;
-            this.btnPesquisar.Visible = false;
+            this.txtPesquisar.TextChanged += new System.EventHandler(this.txtPesquisar_TextChanged);
+            this.txtPesquisar.Validating += new System.ComponentModel.CancelEventHandler(this.txtPesquisar_Validating);
             // 
             // radioCliente
             // 
@@ -256,7 +234,6 @@
             this.Controls.Add(this.dgvClientes);
             this.Controls.Add(this.radioLocacao);
             this.Controls.Add(this.radioCliente);
-            this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.lblPesquisar);
             this.Controls.Add(this.txtPesquisar);
@@ -276,7 +253,6 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label lblPesquisar;
         private System.Windows.Forms.TextBox txtPesquisar;
-        private FontAwesome.Sharp.IconButton btnPesquisar;
         private System.Windows.Forms.RadioButton radioCliente;
         private System.Windows.Forms.RadioButton radioLocacao;
         private System.Windows.Forms.DataGridView dgvClientes;

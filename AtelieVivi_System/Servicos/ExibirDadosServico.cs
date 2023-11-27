@@ -2,6 +2,7 @@
 using FontAwesome.Sharp;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,16 +12,16 @@ namespace AtelieVivi_System.Servicos
 {
     public class ExibirDadosServico
     {
-        public void AtivarCampos(Panel panel10, IconButton btnPesquisar, TextBox txtPesquisar, Label lblPesquisar)
+        public void AtivarCampos(Panel panel10, TextBox txtPesquisar, Label lblPesquisar)
         {
-            if (!(panel10.Visible && btnPesquisar.Visible && txtPesquisar.Visible && lblPesquisar.Visible))
+            if (!(panel10.Visible && txtPesquisar.Visible && lblPesquisar.Visible))
             {
                 panel10.Visible = true;
-                btnPesquisar.Visible = true;
                 txtPesquisar.Visible = true;
                 lblPesquisar.Visible = true;
                 txtPesquisar.Text = "";
             }
+            txtPesquisar.Text = "";
         }
         public void AtivarDGVClientes(DataGridView dgvLocacoes, DataGridView dgvClientes)
         {
@@ -86,16 +87,8 @@ namespace AtelieVivi_System.Servicos
                     e.Value = Convert.ToUInt64(valor).ToString(@"\(00\) 00000-0000");
                 }
             }
-            else if(e.ColumnIndex == dgvClientes.Columns["Id_Cidade"].Index)
-            {
-                if(e.Value != null)
-                {
-                    e.Value = ObterNomeCidadeCliente();
-                }
-            }
             dgvClientes.Columns["User_Insta"].HeaderText = "Usuário do Instagram";
             dgvClientes.Columns["Numero"].HeaderText = "Número";
-            dgvClientes.Columns["Id_Cidade"].HeaderText = "Cidade";
         }
 
         public void TratardgvLocacoes(DataGridView dgvLocacoes, DataGridViewCellFormattingEventArgs e)
@@ -109,13 +102,6 @@ namespace AtelieVivi_System.Servicos
                     e.Value = Convert.ToUInt64(valor).ToString(@"000\.000\.000\-00");
                 }
             }
-            else if(e.ColumnIndex == dgvLocacoes.Columns["Id_Cidade"].Index)
-            {
-                if (e.Value != null)
-                {
-                    e.Value = ObterNomeCidadeLocacao();
-                }
-            }
 
             dgvLocacoes.Columns["Nome_Aniversariante"].HeaderText = "Nome do Aniversariante";
             dgvLocacoes.Columns["Sobrenome_Aniversariante"].HeaderText = "Sobrenome do Aniversariante";
@@ -124,29 +110,62 @@ namespace AtelieVivi_System.Servicos
             dgvLocacoes.Columns["Id_Locacao"].HeaderText = "Identificador da Locação";
             dgvLocacoes.Columns["CPF_Cliente"].HeaderText = "CPF do Cliente";
             dgvLocacoes.Columns["Numero"].HeaderText = "Número";
-            dgvLocacoes.Columns["Id_Cidade"].HeaderText = "Cidade";
         }
-        private string ObterNomeCidadeCliente()
+
+        public void Filtrar(RadioButton radioCliente, RadioButton radioLocacao, DataGridView dgvClientes,DataGridView dgvLocacao, TextBox txtPesquisar)
         {
-            ExibirDadosRepositorio exibirRepositorio = new ExibirDadosRepositorio();
-            exibirRepositorio.ObterNomeCidadeCliente();
-            if (exibirRepositorio.error == true)
+            string pesquisa = txtPesquisar.Text;
+            if (radioCliente.Checked)
             {
-                MessageBox.Show(exibirRepositorio.message, "Ocorreu um problema", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return "Erro";
+                if (pesquisa == "") 
+                {
+                    LimparPesquisa(radioCliente, radioLocacao, dgvClientes, dgvLocacao, txtPesquisar); 
+                }
+                else
+                {
+                    pesquisa = string.Concat(pesquisa.Where(c => char.IsLetterOrDigit(c) || char.IsWhiteSpace(c) || c == ')'));
+                    ExibirDadosRepositorio exibirRepositorio = new ExibirDadosRepositorio();
+                    if (exibirRepositorio.FiltrarClientes(dgvClientes, pesquisa) != "")
+                    {
+                        MessageBox.Show(exibirRepositorio.message, "Ocorreu um problema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
-            return exibirRepositorio.message;
+            else if (radioLocacao.Checked)
+            {
+                if (pesquisa == "") 
+                {
+                    LimparPesquisa(radioCliente, radioLocacao, dgvClientes, dgvLocacao, txtPesquisar);
+                }
+                else
+                {
+                    pesquisa = string.Concat(pesquisa.Where(c => char.IsLetterOrDigit(c) || char.IsWhiteSpace(c) || c == '/' || c == ':' || c == ')'));
+                    ExibirDadosRepositorio exibirRepositorio = new ExibirDadosRepositorio();
+                    if (exibirRepositorio.FiltrarLocacoes(dgvLocacao, pesquisa) != "")
+                    {
+                        MessageBox.Show(exibirRepositorio.message, "Ocorreu um problema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
         }
-        private string ObterNomeCidadeLocacao()
+
+        public void LimparPesquisa(RadioButton radioCliente, RadioButton radioLocacao, DataGridView dgvClientes, DataGridView dgvLocacao, TextBox txtPesquisar)
         {
-            ExibirDadosRepositorio exibirRepositorio = new ExibirDadosRepositorio();
-            exibirRepositorio.ObterNomeCidadeLocacao();
-            if (exibirRepositorio.error == true)
+            if (radioLocacao.Checked)
             {
-                MessageBox.Show(exibirRepositorio.message, "Ocorreu um problema", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return "Erro";
+                if (txtPesquisar.Text == "")
+                {
+                    txtPesquisar.Text = String.Empty;
+                    PreencherdgvLocacoes(dgvLocacao); // Recarrega todos os dados
+                }
+            }else if (radioCliente.Checked)
+            {
+                if (txtPesquisar.Text == "")
+                {
+                    txtPesquisar.Text = String.Empty;
+                    PreencherdgvClientes(dgvClientes); // Recarrega todos os dados
+                }
             }
-            return exibirRepositorio.message;
         }
     }
 }
