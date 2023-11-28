@@ -253,5 +253,12 @@ namespace AtelieVivi_System
             else
                 FormBorderStyle = FormBorderStyle.Sizable;
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            labelRelogio.Text = DateTime.Now.ToLocalTime().ToString();
+            iconPictureBox1.Visible = true;
+            labelRelogio.Visible = true;
+        }
     }
 }

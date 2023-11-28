@@ -200,5 +200,20 @@
   <ItemGroup>
     <None Include="ArquivosDoProjeto\gradient.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gradient.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ArquivosDoProjeto\logocliente3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ArquivosDoProjeto\logo_cliente.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ArquivosDoProjeto\logo_cliente2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ArquivosDoProjeto\195d740f34ee0d9bb27f3831b9455f99.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

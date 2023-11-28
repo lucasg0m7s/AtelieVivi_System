@@ -470,7 +470,7 @@
             this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnCadastrar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCadastrar.Location = new System.Drawing.Point(17, 413);
+            this.btnCadastrar.Location = new System.Drawing.Point(12, 399);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnCadastrar.Size = new System.Drawing.Size(115, 32);

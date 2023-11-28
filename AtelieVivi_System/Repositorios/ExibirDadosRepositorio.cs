@@ -31,10 +31,6 @@ namespace AtelieVivi_System.Repositorios
                 sqlDataAdapter.Fill(tabela);
 
                 dgvLocacoes.DataSource = tabela;
-                dgvLocacoes.Columns[12].Visible = false;
-                dgvLocacoes.Columns[13].Visible = false;
-                dgvLocacoes.Columns[14].Visible = false;
-                dgvLocacoes.Columns[15].Visible = false;
             }
             catch (Exception ex)
             {
@@ -59,10 +55,6 @@ namespace AtelieVivi_System.Repositorios
                 sqlDataAdapter.Fill(tabela);
 
                 dgvClientes.DataSource = tabela;
-                dgvClientes.Columns[11].Visible = false;
-                dgvClientes.Columns[12].Visible = false;
-                dgvClientes.Columns[13].Visible = false;
-                dgvClientes.Columns[14].Visible = false;
 
             }
             catch (Exception ex)

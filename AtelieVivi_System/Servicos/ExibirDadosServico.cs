@@ -89,6 +89,10 @@ namespace AtelieVivi_System.Servicos
             }
             dgvClientes.Columns["User_Insta"].HeaderText = "Usuário do Instagram";
             dgvClientes.Columns["Numero"].HeaderText = "Número";
+            dgvClientes.Columns[11].Visible = false;
+            dgvClientes.Columns[12].Visible = false;
+            dgvClientes.Columns[13].Visible = false;
+            dgvClientes.Columns[14].Visible = false;
         }
 
         public void TratardgvLocacoes(DataGridView dgvLocacoes, DataGridViewCellFormattingEventArgs e)
@@ -110,6 +114,10 @@ namespace AtelieVivi_System.Servicos
             dgvLocacoes.Columns["Id_Locacao"].HeaderText = "Identificador da Locação";
             dgvLocacoes.Columns["CPF_Cliente"].HeaderText = "CPF do Cliente";
             dgvLocacoes.Columns["Numero"].HeaderText = "Número";
+            dgvLocacoes.Columns[12].Visible = false;
+            dgvLocacoes.Columns[13].Visible = false;
+            dgvLocacoes.Columns[14].Visible = false;
+            dgvLocacoes.Columns[15].Visible = false;
         }
 
         public void Filtrar(RadioButton radioCliente, RadioButton radioLocacao, DataGridView dgvClientes,DataGridView dgvLocacao, TextBox txtPesquisar)

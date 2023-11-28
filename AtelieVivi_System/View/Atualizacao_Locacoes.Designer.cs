@@ -216,6 +216,8 @@
             // 
             // comboCliente
             // 
+            this.comboCliente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.comboCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboCliente.Enabled = false;
             this.comboCliente.Font = new System.Drawing.Font("Century Gothic", 11.25F);
