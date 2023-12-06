@@ -94,6 +94,15 @@ namespace AtelieVivi_System.Servicos
             dgvClientes.Columns[13].Visible = false;
             dgvClientes.Columns[14].Visible = false;
         }
+        public void TratardgvClientes(DataGridView dgvClientes)
+        {
+            dgvClientes.Columns["User_Insta"].HeaderText = "Usuário do Instagram";
+            dgvClientes.Columns["Numero"].HeaderText = "Número";
+            dgvClientes.Columns[11].Visible = false;
+            dgvClientes.Columns[12].Visible = false;
+            dgvClientes.Columns[13].Visible = false;
+            dgvClientes.Columns[14].Visible = false;
+        }
 
         public void TratardgvLocacoes(DataGridView dgvLocacoes, DataGridViewCellFormattingEventArgs e)
         {
@@ -107,6 +116,20 @@ namespace AtelieVivi_System.Servicos
                 }
             }
 
+            dgvLocacoes.Columns["Nome_Aniversariante"].HeaderText = "Nome do Aniversariante";
+            dgvLocacoes.Columns["Sobrenome_Aniversariante"].HeaderText = "Sobrenome do Aniversariante";
+            dgvLocacoes.Columns["Horario_Locacao"].HeaderText = "Horário da Locação";
+            dgvLocacoes.Columns["Data_Locacao"].HeaderText = "Data da Locação";
+            dgvLocacoes.Columns["Id_Locacao"].HeaderText = "Identificador da Locação";
+            dgvLocacoes.Columns["CPF_Cliente"].HeaderText = "CPF do Cliente";
+            dgvLocacoes.Columns["Numero"].HeaderText = "Número";
+            dgvLocacoes.Columns[12].Visible = false;
+            dgvLocacoes.Columns[13].Visible = false;
+            dgvLocacoes.Columns[14].Visible = false;
+            dgvLocacoes.Columns[15].Visible = false;
+        }
+        public void TratardgvLocacoes(DataGridView dgvLocacoes)
+        {
             dgvLocacoes.Columns["Nome_Aniversariante"].HeaderText = "Nome do Aniversariante";
             dgvLocacoes.Columns["Sobrenome_Aniversariante"].HeaderText = "Sobrenome do Aniversariante";
             dgvLocacoes.Columns["Horario_Locacao"].HeaderText = "Horário da Locação";

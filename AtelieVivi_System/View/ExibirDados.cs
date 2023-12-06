@@ -19,6 +19,8 @@ namespace AtelieVivi_System.View
             ExibirDadosServico exibirDadosServico = new ExibirDadosServico();
             exibirDadosServico.PreencherdgvClientes(dgvClientes);
             exibirDadosServico.PreencherdgvLocacoes(dgvLocacoes);
+            exibirDadosServico.TratardgvLocacoes(dgvLocacoes);
+            exibirDadosServico.TratardgvClientes(dgvClientes);
         }
 
         private void dgvLocacoes_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
