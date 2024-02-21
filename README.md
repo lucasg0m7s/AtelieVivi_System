@@ -15,4 +15,3 @@ O sistema foi desenvolvido em Windows Forms, utilizando a linguagem C#. O banco 
 Para garantir uma estrutura organizada e de fácil manutenção, o projeto adotou o padrão de arquitetura de software DAO (Data Access Object), que promove a separação clara entre as camadas de acesso a dados e a lógica de negócios. Além disso, foram utilizadas as técnicas de CRUD (Create, Read, Update, Delete) para a manipulação eficiente dos dados.
 
 Este sistema representa não apenas um exercício acadêmico, mas também uma oportunidade de aplicar conceitos teóricos em um contexto prático.
-
